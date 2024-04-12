@@ -57,7 +57,12 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": [BASE_DIR / "templates"],
+        "DIRS": [
+            os.path.join(BASE_DIR, 'templates'),  # Add the project-level templates directory
+            os.path.join(BASE_DIR, 'tasks', 'templates'),  # Add the tasks app templates directory
+            os.path.join(BASE_DIR, 'users', 'templates'),  # Add the users app templates directory
+            # Add other directories as needed
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,7 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Add the project-level templates directory
+    os.path.join(BASE_DIR, 'tasks', 'static'),  # Add the tasks app templates directory
+    os.path.join(BASE_DIR, 'users', 'static'),  # Add the users app templates directory
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
