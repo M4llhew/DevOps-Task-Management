@@ -1,0 +1,53 @@
+body main .login-container form {
+    width: 100%;
+    padding: 20px;
+}
+
+body main .login-container form .right {
+    margin-left: auto;
+}
+
+body main .login-container form a:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body main .login-container {
+    height: fit-content;
+    width: 400px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
+    text-transform: capitalize;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.login-btn {
+    border: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+body main .login-container .login-text {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+body main .login-container form .feather-eye:hover {
+    stroke-width: 3;
+    cursor: pointer;
+}
+
+.feather-eye-off:hover {
+    stroke-width: 3;
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+<!-- templates/registration/login.html -->
+{% extends "base.html" %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+
+{% block title %}Login{% endblock %}
+{% block content %}
+
+<body class="inter">
+    <main class="login colourful">
+        <div class="login-container inline-column">
+            <p class="primary login-text">login</p>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mmt lmb section-container inline-column username">
+                    <p class="primary">username</p>
+
+                    <div class="input-container inline-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-user secondary">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        {{ form.username }}
+                    </div>
+                </div>
+
+                <div class="section-container inline-column">
+                    <p class="primary">password</p>
+                    <div class="input-container inline-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-lock secondary">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        {{ form.password }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye right tertiary hide"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye-off right tertiary"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+                    </div>
+                </div>
+                <a class="smt lmb right secondary forgot">forgot password?</a>
+                <button id="login" onclick="login()" class="secondary-button colourful secondary login-btn">
+                    Login
+                </button>
+                <a class="smt secondary">or sign up</a>
+            </form>
+
+
+        </div>
+    </main>
+    <script>
+        function login() {
+            console.log("logged In")
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const eyeElement = document.querySelector(".feather-eye")
+            const eyeClosedElement = document.querySelector(".feather-eye-off")
+            eyeElement.addEventListener('click', toggleEye)
+            eyeClosedElement.addEventListener('click', toggleEye)
+
+            function toggleEye() {
+                const passwordInput = document.querySelector(".passwordInput")
+                passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+                eyeElement.classList.toggle("hide")
+                eyeClosedElement.classList.toggle("hide")
+            }
+        })
+    </script>
+</body>
+{% endblock %}
