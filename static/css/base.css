@@ -242,7 +242,6 @@ select {
 
 
 
-
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
                                         CALENDAR
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -488,7 +487,7 @@ body main .section-container .input-container {
     width: 100%;
 }
 
-body main .section-container .input-container svg{
+body main .section-container .input-container .gentle-padding {
     /* margin-bottom: 1px; */
     /* align-items: center; */
     margin: 0 5px 1px 0;

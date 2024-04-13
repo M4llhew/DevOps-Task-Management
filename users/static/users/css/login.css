@@ -1,24 +1,24 @@
-body main .login-container form {
+form {
     width: 100%;
     padding: 20px;
 }
 
-body main .login-container form .right {
+form .right {
     margin-left: auto;
 }
 
-body main .login-container form a:hover {
+form a:hover {
     font-weight: 600;
     cursor: pointer;
 }
 
-body .login {
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body main .login-container {
+.login-container {
     height: fit-content;
     width: 400px;
     background-color: #F5F5F5;
@@ -36,13 +36,13 @@ body main .login-container {
     width: 100%;
 }
 
-body main .login-container .login-text {
+.login-text {
     margin-top: 20px;
     font-size: 32px;
     font-weight: 500;
 }
 
-body main .login-container form .feather-eye:hover {
+.feather-eye:hover {
     stroke-width: 3;
     cursor: pointer;
 }
@@ -50,4 +50,12 @@ body main .login-container form .feather-eye:hover {
 .feather-eye-off:hover {
     stroke-width: 3;
     cursor: pointer;
+}
+
+.test2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

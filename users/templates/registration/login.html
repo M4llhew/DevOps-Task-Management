@@ -2,13 +2,16 @@
 {% extends "base.html" %}
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+<!--<link rel="stylesheet" href="{% static 'css/base.css' %}">-->
 
 {% block title %}Login{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+{% endblock %}
 {% block content %}
 
-<body class="inter">
-    <main class="login colourful">
+<div class="inter test2 colourful">
+    <div class="login colourful">
         <div class="login-container inline-column">
             <p class="primary login-text">login</p>
             <form method="post">
@@ -19,7 +22,7 @@
                     <div class="input-container inline-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-user secondary">
+                            class="feather feather-user secondary gentle-padding">
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
@@ -32,7 +35,7 @@
                     <div class="input-container inline-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-lock secondary">
+                            class="feather feather-lock secondary gentle-padding">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                         </svg>
@@ -50,7 +53,7 @@
 
 
         </div>
-    </main>
+    </div>
     <script>
         function login() {
             console.log("logged In")
@@ -70,5 +73,5 @@
             }
         })
     </script>
-</body>
+</div>
 {% endblock %}

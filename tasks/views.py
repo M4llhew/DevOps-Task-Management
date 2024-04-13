@@ -20,10 +20,17 @@ def create_task(request):
         }
         return render(request, 'tasks/create_task.html', context)
 
-class HomeView(TemplateView):
-    template_name = "tasks/home.html"  # specify your template name here
 
+class SidebarView(TemplateView):
     def get_context_data(self, *args, **kwargs):
-        context = super(HomeView, self).get_context_data(*args, **kwargs)
+        context = super(SidebarView, self).get_context_data(*args, **kwargs)
         context['show_sidebar'] = True  # or any value you want to pass
         return context
+
+
+class HomeView(SidebarView):
+    template_name = "tasks/home.html"  # specify your template name here
+
+
+class CalendarView(SidebarView):
+    template_name = 'calendar.html'
