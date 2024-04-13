@@ -510,6 +510,10 @@ body main .main-container .create-task form .section-container .input-container 
     width: 100%;
   }
 
+.form-input {
+    outline: none;
+}
+
 
 
 

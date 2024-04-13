@@ -13,15 +13,7 @@ class CustomUserCreationForm(UserCreationForm):
             'email': forms.EmailInput(attrs={
                 'class': 'form-control',
                 'style': 'color: red; border: 1px solid blue;',
-            }),
-            'password1': forms.PasswordInput(attrs={
-                'class': 'form-control',
-                'style': 'color: red; border: 1px solid blue;',
-            }),
-            'password2': forms.PasswordInput(attrs={
-                'class': 'form-control',
-                'style': 'color: red; border: 1px solid blue;',
-            }),
+            })
         }
 
 
@@ -36,12 +28,10 @@ class CustomAuthenticationForm(AuthenticationForm):
         super().__init__(*args, **kwargs)
         # Add custom styling
         self.fields['username'].widget.attrs.update({
-            'class': 'primary',
-            'placeholder': 'Email',
-            'style': 'outline: none;'
+            'class': 'primary form-input',
+            'placeholder': 'Email'
         })
         self.fields['password'].widget.attrs.update({
-            'class': 'primary',
-            'placeholder': 'Password',
-            'style': 'outline: none;'
+            'class': 'primary form-input',
+            'placeholder': 'Password'
         })
