@@ -141,92 +141,12 @@
                 <span></span>
             </div>
         </div>
-        <div class="create-task hide">
-            <div class="creation-container inline-column">
-                <p>Create Task</p>
-                <form>
-                    <div class="section-container inline-column">
-                        <p class="primary">title</p>
-                        <div class="input-container inline-row">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="feather feather-type tertiary">
-                                <polyline points="4 7 4 4 20 4 20 7"></polyline>
-                                <line x1="9" y1="20" x2="15" y2="20"></line>
-                                <line x1="12" y1="4" x2="12" y2="20"></line>
-                            </svg>
-                            <input type="text" id="titleInput" placeholder="enter title" class="tertiary">
-                        </div>
-                    </div>
-
-                    <div class="section-container inline-column">
-                        <p class="primary">description</p>
-                        <div class="input-container inline-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="feather feather-type tertiary">
-                                <polyline points="4 7 4 4 20 4 20 7"></polyline>
-                                <line x1="9" y1="20" x2="15" y2="20"></line>
-                                <line x1="12" y1="4" x2="12" y2="20"></line>
-                            </svg>
-                            <input type="text" id="descInput" placeholder="enter description" class="tertiary">
-                        </div>
-                    </div>
-
-                    <div class="section-container inline-column">
-                        <p class="primary">project</p>
-                        <div class="input-container inline-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="feather feather-folder tertiary">
-                                <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                </path>
-                            </svg>
-                            <select class="secondary">
-                                <option value="" disabled selected>select a project</option>
-                                <option value="project1">project 1</option>
-                                <option value="project2">project 2</option>
-                                <option value="project3">project 3</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button accesskey="h" class="secondary-button colourful inline-row create"
-                            onclick="validateTask()">
-                        <p>create</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round" class="feather feather-plus">
-                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                        </svg>
-                    </button>
-                    <span></span>
-                    <span></span>
-
-                </form>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+        {% include 'tasks/partials/task_form.html' %}
     </div>
 </div>
 
 
-<script>
-    function createTask() {
-        console.log("task creation")
-        const task_container = document.querySelector('main .create-task')
-        const create_btn = document.querySelector('main header .advanced .container .right-side .create')
-
-
-        task_container.classList.toggle('hide')
-        create_btn.classList.toggle('colourful')
-        create_btn.classList.toggle('active-button')
-
-    }
-</script>
+<script src="{% static 'tasks/js/show_task_form.js' %}"></script>
 <script src="{% static 'tasks/js/week_view_changer.js' %}"></script>
 <script src="{% static 'tasks/js/date_selector.js' %}"></script>
 <script src="{% static 'tasks/js/draggable_tasks.js' %}"></script>

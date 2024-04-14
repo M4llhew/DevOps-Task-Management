@@ -1,0 +1,68 @@
+<div class="create-task hide">
+    <div class="creation-container inline-column">
+        <p>Create Task</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="section-container inline-column">
+                <p class="primary">title</p>
+                <div class="input-container inline-row">
+                    <svg class="feather feather-type tertiary" fill="none" height="24" stroke="currentColor"
+                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                         width="24" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                        <line x1="9" x2="15" y1="20" y2="20"></line>
+                        <line x1="12" x2="12" y1="4" y2="20"></line>
+                    </svg>
+                    {{ task_create_form.title }}
+<!--                    <input class="tertiary" id="titleInput" placeholder="enter title" type="text">-->
+                </div>
+            </div>
+            <div class="section-container inline-column">
+                <p class="primary">description</p>
+                <div class="input-container inline-row">
+                    <svg class="feather feather-type tertiary" fill="none" height="24" stroke="currentColor"
+                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                         width="24" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                        <line x1="9" x2="15" y1="20" y2="20"></line>
+                        <line x1="12" x2="12" y1="4" y2="20"></line>
+                    </svg>
+                    {{ task_create_form.description }}
+<!--                    <input class="tertiary" id="descInput" placeholder="enter description" type="text">-->
+                </div>
+            </div>
+            <div class="section-container inline-column">
+                <p class="primary">project</p>
+                <div class="input-container inline-row">
+                    <svg class="feather feather-folder tertiary" fill="none" height="24" stroke="currentColor"
+                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                         width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                        </path>
+                    </svg>
+                    <select class="secondary">
+                        <option disabled selected value="">select a project</option>
+                        <option value="project1">project 1</option>
+                        <option value="project2">project 2</option>
+                        <option value="project3">project 3</option>
+                    </select>
+                </div>
+            </div>
+            <button accesskey="h" class="secondary-button colourful inline-row create"
+                    onclick="validateTask()">
+                <p>create</p>
+                <svg class="feather feather-plus" fill="none" height="24" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                     width="24" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="12" x2="12" y1="5" y2="19"></line>
+                    <line x1="5" x2="19" y1="12" y2="12"></line>
+                </svg>
+            </button>
+            <span></span>
+            <span></span>
+        </form>
+        <span></span>
+        <span></span>
+    </div>
+</div>

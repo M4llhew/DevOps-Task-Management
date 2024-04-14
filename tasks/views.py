@@ -23,7 +23,7 @@ def create_task(request):
 
 class SidebarView(TemplateView):
     def get_context_data(self, *args, **kwargs):
-        context = super(SidebarView, self).get_context_data(*args, **kwargs)
+        context = super(SidebarView, self).get_context_data(**kwargs)
         context['show_sidebar'] = True  # or any value you want to pass
         return context
 
@@ -34,5 +34,10 @@ class HomeView(SidebarView):
 
 class CalendarView(SidebarView):
     template_name = 'tasks/calendar.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(CalendarView, self).get_context_data(*args, **kwargs)
+        context['task_create_form'] = TaskForm()
+        return context
 
 
