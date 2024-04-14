@@ -1,0 +1,252 @@
+main header {
+    text-transform: capitalize;
+    /* padding-left: 25px; */
+    min-height: 90px;
+
+    justify-content: center;
+}
+
+main header .intro {
+    height: 90px;
+    border-bottom: 3px solid #E1E5E8;
+}
+
+main header .container {
+    padding-left: 25px;
+    line-height: 1;
+}
+
+main header .container .welcome {
+    font-size: 32px;
+    margin-bottom: 2px;
+}
+
+main header .container .date {
+    font-size: 16px;
+}
+
+main header .intro svg {
+    margin: 0 25px 0 auto;
+    transition: stroke-width 0.2s ease;
+}
+
+main header svg:hover {
+    stroke-width: 3;
+    cursor: pointer;
+}
+
+main header .advanced {
+    height: 60px;
+    border-bottom: 3px solid #E1E5E8;
+}
+
+main header .advanced .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-left: 25px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+main header .advanced .container .today{
+    font-size: 18px;
+    padding: 6px 25px;
+    margin-right: 15px;
+}
+
+main header .advanced .container .date-selector svg {
+    margin-right: 5px;
+}
+
+main header .advanced .container .date-selector svg {
+    margin-right: 5px;
+}
+
+main header .advanced .container .right-side {
+    margin-right: 25px;
+}
+
+main header .advanced .container .right-side .create {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 35px;
+    margin-left: 15px;
+}
+
+main header .advanced .container .right-side .create p {
+    font-size: 20px;
+}
+
+body main .calendar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+body main .calendar .dates {
+    text-transform: capitalize;
+    padding: 5px 0;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 3px solid #E1E5E8;
+}
+
+body main .calendar .dates p {
+    border-left: 3px solid #E1E5E8;
+    padding: 10px 25px;
+    width: 100%;
+}
+
+body main .calendar .dates p:first-child {
+    border: none;
+}
+
+body main .calendar .dates .today {
+    font-weight: 700;
+}
+
+body main .calendar .content {
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+body main .calendar .content .column {
+    height: 100%;
+    border-left: 3px solid #EBECEC;
+    padding: 0px 25px;
+    width: 100%;
+}
+
+body main .calendar .content .column:first-child {
+    border: none;
+}
+
+body main .calendar .content .container {
+    margin: 5px 0px;
+}
+
+body main .calendar .content .container .task {
+    border-left: 10px solid #ABE7B8;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+body main .calendar .content .container .task .title {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+body main .calendar .content .container .task .project {
+    font-size: 12px;
+    line-height: 1;
+}
+
+body main .calendar .content .container {
+    border-radius: 15px;
+    border: 3px solid #EBECEC;
+
+}
+
+
+body main .main-container {
+    height: 100%;
+    width: 100%;
+}
+
+body main .main-container .create-task {
+    width: 600px;
+    height: 100%;
+    /* border-left: 3px solid #EBECEC; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+body main .creation-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+body main form .section-container{
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body main form button{
+    border: none;
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin-top: 10px;
+}
+
+body main form .section-container {
+    border-bottom: 1px solid #5B5B5B;
+    width: 100%;
+    height: fit-content;
+}
+
+body main form .section-container p {
+    margin-right: auto;
+    padding-left: 5px;
+    /* line-height: 0.5; */
+    font-weight: 550;
+}
+
+body main .section-container .title {
+    /* margin-right: auto; */
+    line-height: 0.5;
+    /* font-size: 1px; */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+body main .section-container .input-container {
+    /* align-items: center; */
+    padding: 5px 0;
+    /* margin-right: auto; */
+    width: 100%;
+}
+
+body main .section-container .input-container .gentle-padding {
+    /* margin-bottom: 1px; */
+    /* align-items: center; */
+    margin: 0 5px 1px 0;
+}
+
+body main form .section-container .input-container input {
+    border: none;
+    background-color: transparent;
+}
+
+body main form .section-container .input-container input::placeholder {
+    color: #363636;
+}
+
+body main .main-container .create-task form .section-container .input-container select {
+    border: none;
+    background-color: transparent;
+    color: #5B5B5B;
+    padding: 5px 0;
+    width: 100%;
+  }

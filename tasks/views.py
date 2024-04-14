@@ -33,4 +33,6 @@ class HomeView(SidebarView):
 
 
 class CalendarView(SidebarView):
-    template_name = 'calendar.html'
+    template_name = 'tasks/calendar.html'
+
+

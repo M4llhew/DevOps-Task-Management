@@ -1,10 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends  "base.html" %}
+{% load static %}
+{% block title %} Calendar {% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'tasks/css/calendar.css' %}">
+{% endblock %}
+{% block content %}
+<div class="inline-column test2">
+    <header class="inline-column">
+        <div class="inline-row intro">
+            <div class="container">
+                <p class="welcome primary">welcome matthew</p>
+                <p class="date secondary">19th february 2024</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1"></circle>
+                <circle cx="12" cy="5" r="1"></circle>
+                <circle cx="12" cy="19" r="1"></circle>
+            </svg>
+        </div>
+        <div class="advanced">
+            <div class="container inline-row">
+                <button class="secondary-button secondary today">today</button>
+                <div class="date-selector inline-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-chevrons-left prev-month">
+                        <polyline points="11 17 6 12 11 7"></polyline>
+                        <polyline points="18 17 13 12 18 7"></polyline>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-chevron-left prev-week">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <p></p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-chevron-right next-week">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-chevrons-right next-month">
+                        <polyline points="13 17 18 12 13 7"></polyline>
+                        <polyline points="6 17 11 12 6 7"></polyline>
+                    </svg>
+                </div>
+                <div class="right-side inline-row">
+                    <div class="br inline-row">
+                        <button class="mmr inline-row secondary-button secondary view-button"
+                                onclick="toggleWeek()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="smr feather feather-eye">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <p class="smr">views</p>
+                        </button>
+                        <button class="mmr inline-row secondary-button secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="smr feather feather-filter">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                            <p class="smr">filter</p>
+                        </button>
+                    </div>
+                    <button accesskey="w" class="secondary-button colourful inline-row create"
+                            onclick="createTask()">
+                        <p>create</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="inline-row main-container">
+        <div class="calendar inline-column">
+            <div class="dates inline-row">
+                <p class="monday-header"></p>
+                <p class="tuesday-header"></p>
+                <p class="wednesday-header"></p>
+                <p class="thursday-header"></p>
+                <p class="friday-header"></p>
+                <p class="saturday-header"></p>
+                <p class="sunday-header"></p>
+                <span></span>
+            </div>
+            <div class="content inline-row">
+                <div id="column0" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div id="draggableItem1" class="draggable-item container" draggable="true"
+                         ondragstart="drag(event)">
+                        <div class="task inline-column">
+                            <p class="title secondary">organise x y z</p>
+                            <p class="project tertiary">project 1</p>
+                        </div>
+                    </div>
+                    <div id="draggableItem2" class="draggable-item container" draggable="true"
+                         ondragstart="drag(event)">
+                        <div class="task inline-column">
+                            <p class="title secondary">organise x y z</p>
+                            <p class="project tertiary">project 1</p>
+                        </div>
+                    </div>
+                    <div id="draggableItem3" class="draggable-item container" draggable="true"
+                         ondragstart="drag(event)">
+                        <div class="task inline-column">
+                            <p class="title secondary">organise x y z</p>
+                            <p class="project tertiary">project 1</p>
+                        </div>
+                    </div>
+                    <div id="draggableItem4" class="draggable-item container" draggable="true"
+                         ondragstart="drag(event)">
+                        <div class="task inline-column">
+                            <p class="title secondary">organise x y z</p>
+                            <p class="project tertiary">project 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="column1" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+                <div id="column2" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+                <div id="column3" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+                <div id="column4" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+                <div id="column5" class="column saturday-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+                <div id="column6" class="column sunday-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+                <span></span>
+            </div>
+        </div>
+        <div class="create-task hide">
+            <div class="creation-container inline-column">
+                <p>Create Task</p>
+                <form>
+                    <div class="section-container inline-column">
+                        <p class="primary">title</p>
+                        <div class="input-container inline-row">
 
-</body>
-</html>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-type tertiary">
+                                <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                                <line x1="9" y1="20" x2="15" y2="20"></line>
+                                <line x1="12" y1="4" x2="12" y2="20"></line>
+                            </svg>
+                            <input type="text" id="titleInput" placeholder="enter title" class="tertiary">
+                        </div>
+                    </div>
+
+                    <div class="section-container inline-column">
+                        <p class="primary">description</p>
+                        <div class="input-container inline-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-type tertiary">
+                                <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                                <line x1="9" y1="20" x2="15" y2="20"></line>
+                                <line x1="12" y1="4" x2="12" y2="20"></line>
+                            </svg>
+                            <input type="text" id="descInput" placeholder="enter description" class="tertiary">
+                        </div>
+                    </div>
+
+                    <div class="section-container inline-column">
+                        <p class="primary">project</p>
+                        <div class="input-container inline-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-folder tertiary">
+                                <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                </path>
+                            </svg>
+                            <select class="secondary">
+                                <option value="" disabled selected>select a project</option>
+                                <option value="project1">project 1</option>
+                                <option value="project2">project 2</option>
+                                <option value="project3">project 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button accesskey="h" class="secondary-button colourful inline-row create"
+                            onclick="validateTask()">
+                        <p>create</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <span></span>
+                    <span></span>
+
+                </form>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function createTask() {
+        console.log("task creation")
+        const task_container = document.querySelector('main .create-task')
+        const create_btn = document.querySelector('main header .advanced .container .right-side .create')
+
+
+        task_container.classList.toggle('hide')
+        create_btn.classList.toggle('colourful')
+        create_btn.classList.toggle('active-button')
+
+    }
+</script>
+<script src="{% static 'tasks/js/week_view_changer.js' %}"></script>
+<script src="{% static 'tasks/js/date_selector.js' %}"></script>
+<script src="{% static 'tasks/js/draggable_tasks.js' %}"></script>
+{% endblock %}
