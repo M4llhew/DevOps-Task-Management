@@ -78,8 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log(today.toDateString(), "=", date.toDateString())
 
                 if (today.toDateString() == date.toDateString()) {
-                    console.log("true")
-                    weekHeaders[i].classList.add("today")
+                    const grandParentElement = weekHeaders[i].parentElement.parentElement;
+                    const childElements = grandParentElement.children;
+
+                    for (var j = 0; j < childElements.length; j++) {
+                        childElements[j].classList.add("today");
+                    }
+
                 } else {
                     weekHeaders[i].classList.remove("today")
                 }

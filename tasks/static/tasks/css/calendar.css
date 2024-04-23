@@ -103,12 +103,10 @@ body main .calendar .dates p:first-child {
     border: none;
 }
 
-body main .calendar .dates .today {
-    font-weight: 700;
-}
+
 
 body main .calendar .content {
-    padding-top: 10px;
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -118,8 +116,30 @@ body main .calendar .content {
 body main .calendar .content .column {
     height: 100%;
     border-left: 3px solid #EBECEC;
-    padding: 0px 25px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body main .calendar .content .column .column-header {
+    width: 100%;
+    border-bottom: 3px solid #EBECEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+
+}
+
+body main .calendar .content .column .column-content {
+    width: 100%;
+    padding: 0 25px;
+    height: 100%;
+}
+
+body main .calendar .content .column p {
+    padding-bottom: 5px;
 }
 
 body main .calendar .content .column:first-child {
@@ -127,7 +147,7 @@ body main .calendar .content .column:first-child {
 }
 
 body main .calendar .content .container {
-    margin: 5px 0px;
+    margin-top: 10px;
 }
 
 body main .calendar .content .container .task {
@@ -250,3 +270,9 @@ body main .main-container .create-task form .section-container .input-container 
     padding: 5px 0;
     width: 100%;
   }
+
+body main .calendar .content .column .today {
+    font-weight: 700;
+    border-bottom: 3px solid #DEE1E4;
+    background-color: #EEF0F1;
+}
