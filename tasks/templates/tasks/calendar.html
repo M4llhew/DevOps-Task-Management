@@ -2,17 +2,18 @@
 {% load static %}
 {% block title %} Calendar {% endblock %}
 {% block styles %}
-<link href="{% static 'tasks/css/calendar.css' %}" rel="stylesheet">
+<link href="{% static 'tasks/css/calendar_2
+.css' %}" rel="stylesheet">
 {% endblock %}
 {% block content %}
 <div class="inline-column test2">
     <header class="inline-column">
-        <div class="inline-row intro">
-            <div class="container">
-                <p class="welcome primary">welcome matthew</p>
-                <p class="date secondary">19th february 2024</p>
+        <div class="inline-row header-content">
+            <div class="user-info">
+                <p class="welcome-message primary">welcome matthew</p>
+                <p class="current-date secondary">19th february 2024</p>
             </div>
-            <svg class="feather feather-more-vertical" fill="none" height="24" stroke="currentColor"
+            <svg class="feather feather-more-vertical three-dots" fill="none" height="24" stroke="currentColor"
                  stroke-linecap="round"
                  stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
                  xmlns="http://www.w3.org/2000/svg">
@@ -21,10 +22,10 @@
                 <circle cx="12" cy="19" r="1"></circle>
             </svg>
         </div>
-        <div class="advanced">
+        <div class="advanced-options">
             <div class="container inline-row">
-                <button class="secondary-button secondary today">today</button>
-                <div class="date-selector inline-row">
+                <button class="secondary-button secondary today-button">today</button>
+                <div class="date-controls inline-row">
                     <svg class="feather feather-chevrons-left prev-month" fill="none" height="24" stroke="currentColor"
                          stroke-linecap="round"
                          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
@@ -38,7 +39,7 @@
                          xmlns="http://www.w3.org/2000/svg">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
-                    <p></p>
+                    <p class="selected-date"></p>
                     <svg class="feather feather-chevron-right next-week" fill="none" height="24" stroke="currentColor"
                          stroke-linecap="round"
                          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
@@ -53,7 +54,7 @@
                         <polyline points="6 17 11 12 6 7"></polyline>
                     </svg>
                 </div>
-                <div class="right-side inline-row">
+                <div class="action-buttons inline-row">
                     <div class="br inline-row">
                         <button class="mmr inline-row secondary-button secondary view-button"
                                 onclick="toggleWeek()">
@@ -74,9 +75,9 @@
                             <p class="smr">filter</p>
                         </button>
                     </div>
-                    <button accesskey="w" class="secondary-button colourful inline-row create"
+                    <button accesskey="w" class="secondary-button colourful inline-row create-button"
                             onclick="createTask()">
-                        <p>create</p>
+                        <p class="create-text">create</p>
                         <svg class="feather feather-plus" fill="none" height="24" stroke="currentColor"
                              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
                              width="24" xmlns="http://www.w3.org/2000/svg">
@@ -88,11 +89,13 @@
             </div>
         </div>
     </header>
+
+
     <div class="inline-row main-container">
-        <div class="calendar inline-column">
+        <div class="calendar-grid inline-column">
             <div class="content inline-row">
                 {% for day in headers %}
-                <div class="column" id="column{{ forloop.counter0 }}" ondragover="allowDrop(event)"
+                <div class="day-column {{ day }}-column" id="column{{ forloop.counter0 }}" ondragover="allowDrop(event)"
                      ondrop="drop(event)">
                     <div class="column-header">
                         <p class="{{ day }}-header"></p>
@@ -104,7 +107,6 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-
                 </div>
                 {% endfor %}
             </div>

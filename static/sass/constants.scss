@@ -1,0 +1,30 @@
+$primary-color: #000000;
+$secondary-color: #363636;
+$tertiary-color: #5B5B5B;
+
+$colourful-background: linear-gradient(to right, #4C64CA, #5F39BC);
+$colourful-color: #EAEAEA;
+
+@mixin secondary-button($border-radius: 12px, $padding: 5px, $border-color: #E1E5E8, $background-color: #F5F5F5) {
+    border-radius: $border-radius;
+    text-transform: capitalize;
+    padding: $padding;
+    border: 3px solid $border-color;
+    background-color: $background-color;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #E1E5E8;
+        font-weight: 600;
+    }
+}
+
+@mixin inline-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin inline-column {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
         const currentDate = new Date()
-        const currentDateElement = document.querySelector('.date-selector p')
+        const currentDateElement = document.querySelector('.selected-date')
         currentDateElement.innerText = getMondayDate(currentDate)
         updateDateHeaders(currentDate)
         console.log(currentDate, "date")
