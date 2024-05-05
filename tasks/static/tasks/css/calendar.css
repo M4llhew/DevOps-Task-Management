@@ -1,250 +1,129 @@
-main header {
-    text-transform: capitalize;
-    min-height: 90px;
-    justify-content: center;
+header {
+  text-transform: capitalize;
+  min-height: 90px;
+  justify-content: center;
+}
+header .header-content {
+  height: 90px;
+  border-bottom: 3px solid #E1E5E8;
+}
+header .user-info {
+  padding-left: 25px;
+  line-height: 1;
+}
+header .user-info .welcome-message {
+  font-size: 32px;
+  margin-bottom: 2px;
+}
+header .user-info .current-date {
+  font-size: 16px;
+}
+header .three-dots {
+  margin: 0 25px 0 auto;
+  transition: stroke-width 0.2s ease;
+}
+header .advanced-options {
+  height: 60px;
+  border-bottom: 3px solid #E1E5E8;
+}
+header .advanced-options .today-button {
+  font-size: 18px;
+  padding: 6px 25px;
+  margin-right: 15px;
+}
+header .advanced-options .container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding-left: 25px;
+  align-items: center;
+}
+header .advanced-options .date-controls svg {
+  margin-right: 5px;
+}
+header .advanced-options .action-buttons {
+  margin-right: 25px;
+  margin-left: auto;
+}
+header .advanced-options .action-buttons .create-button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 35px;
+  margin-left: 15px;
+}
+header .advanced-options .action-buttons .create-text {
+  font-size: 20px;
+}
+header svg:hover {
+  stroke-width: 3;
+  cursor: pointer;
 }
 
-main header .intro {
-    height: 90px;
-    border-bottom: 3px solid #E1E5E8;
+.main-container {
+  height: 100%;
+  width: 100%;
 }
 
-main header .container {
-    padding-left: 25px;
-    line-height: 1;
+.calendar-grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.calendar-grid .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-grid .day-column {
+  height: 100%;
+  border-left: 3px solid #EBECEC;
+  width: 100%;
+}
+.calendar-grid .day-column .column-header {
+  width: 100%;
+  border-bottom: 3px solid #EBECEC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 5px 0px;
+}
+.calendar-grid .day-column .column-content {
+  width: 100%;
+  padding: 0 25px;
+  height: 100%;
+}
+.calendar-grid .day-column p {
+  padding-bottom: 5px;
+}
+.calendar-grid .day-column:first-child {
+  border: none;
 }
 
-main header .container .welcome {
-    font-size: 32px;
-    margin-bottom: 2px;
+.draggable-task-container {
+  border-radius: 15px;
+  border: 3px solid #EBECEC;
+  margin-top: 10px;
+}
+.draggable-task-container .task-details {
+  border-left: 10px solid #ABE7B8;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+.draggable-task-container .task-details .task-title {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.draggable-task-container .task-details .task-description {
+  font-size: 12px;
+  line-height: 1;
 }
 
-main header .container .date {
-    font-size: 16px;
+.hide {
+  display: none;
 }
 
-main header .intro svg {
-    margin: 0 25px 0 auto;
-    transition: stroke-width 0.2s ease;
-}
-
-main header svg:hover {
-    stroke-width: 3;
-    cursor: pointer;
-}
--=-=-==-=-=
-
-main header .advanced {
-    height: 60px;
-    border-bottom: 3px solid #E1E5E8;
-}
--=-=-==-=-=
-
-main header .advanced .container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    padding-left: 25px;
-    align-items: center;
-}
-
-main header .advanced .container .today{
-    font-size: 18px;
-    padding: 6px 25px;
-    margin-right: 15px;
-}
-
-main header .advanced .container .date-selector svg {
-    margin-right: 5px;
-}
-
-
-main header .advanced .container .right-side {
-    margin-right: 25px;
-}
-
-main header .advanced .container .right-side .create {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 35px;
-    margin-left: 15px;
-}
-
-main header .advanced .container .right-side .create p {
-    font-size: 20px;
-}
-
-body main .calendar {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-}
-
-
-
-
-
-body main .calendar .dates {
-    text-transform: capitalize;
-    padding: 5px 0;
-    width: 100%;
-    justify-content: space-between;
-    border-bottom: 3px solid #E1E5E8;
-}
-
-body main .calendar .dates p {
-    border-left: 3px solid #E1E5E8;
-    padding: 10px 25px;
-    width: 100%;
-}
-
-body main .calendar .dates p:first-child {
-    border: none;
-}
-
-
-
-body main .calendar .content {
-
-
-}
-
-body main .calendar .content .column {
-
-}
-
-body main .calendar .content .column .column-header {
-
-
-}
-
-body main .calendar .content .column .column-content {
-
-}
-
-body main .calendar .content .column p {
-
-}
-
-body main .calendar .content .column:first-child {
-
-}
-
-body main .calendar .content .container .task {
-
-}
-
-body main .calendar .content .container .task .title {
-
-}
-
-body main .calendar .content .container .task .project {
-
-}
-
-body main .calendar .content .container {
-
-}
-
-
-body main .main-container {
-
-}
-
-body main .main-container .create-task {
-    width: 600px;
-    height: 100%;
-    /* border-left: 3px solid #EBECEC; */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    justify-content: space-between;
-}
-
-body main .creation-container {
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-body main form .section-container{
-    width: 100%;
-    height: 100%;
-    text-transform: capitalize;
-    justify-content: center;
-    align-items: center;
-
-}
-
-body main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-body main form button{
-    border: none;
-    border-radius: 20px;
-    padding: 5px 12px;
-    margin-top: 10px;
-}
-
-body main form .section-container {
-    border-bottom: 1px solid #5B5B5B;
-    width: 100%;
-    height: fit-content;
-}
-
-body main form .section-container p {
-    margin-right: auto;
-    padding-left: 5px;
-    /* line-height: 0.5; */
-    font-weight: 550;
-}
-
-body main .section-container .title {
-    /* margin-right: auto; */
-    line-height: 0.5;
-    /* font-size: 1px; */
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-body main .section-container .input-container {
-    /* align-items: center; */
-    padding: 5px 0;
-    /* margin-right: auto; */
-    width: 100%;
-}
-
-body main .section-container .input-container .gentle-padding {
-    /* margin-bottom: 1px; */
-    /* align-items: center; */
-    margin: 0 5px 1px 0;
-}
-
-body main form .section-container .input-container input {
-    border: none;
-    background-color: transparent;
-}
-
-body main form .section-container .input-container input::placeholder {
-    color: #363636;
-}
-
-body main .main-container .create-task form .section-container .input-container select {
-    border: none;
-    background-color: transparent;
-    color: #5B5B5B;
-    padding: 5px 0;
-    width: 100%;
- }
-
-body main .calendar .content .column .today {
-    font-weight: 700;
-    border-color: #DEE1E4;
-    background-color: #EEF0F1;
-}
+/*# sourceMappingURL=calendar.css.map */

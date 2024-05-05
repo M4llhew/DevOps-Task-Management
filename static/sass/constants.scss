@@ -1,9 +1,12 @@
 $primary-color: #000000;
 $secondary-color: #363636;
 $tertiary-color: #5B5B5B;
+$background-color: #F5F5F5;
 
 $colourful-background: linear-gradient(to right, #4C64CA, #5F39BC);
 $colourful-color: #EAEAEA;
+
+$border-color: #E1E5E8;
 
 @mixin secondary-button($border-radius: 12px, $padding: 5px, $border-color: #E1E5E8, $background-color: #F5F5F5) {
     border-radius: $border-radius;
@@ -28,3 +31,8 @@ $colourful-color: #EAEAEA;
   display: flex;
   flex-direction: column;
 }
+
+// @mixin colourful {
+//     linear-gradient(to right, #4C64CA, #5F39BC);
+//     color: #EAEAEA;
+// }

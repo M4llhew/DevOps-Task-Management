@@ -80,6 +80,23 @@ select {
   }
 }
 
+.primary {
+    color: #000000;
+}
+
+.secondary {
+    color: #363636;
+}
+
+.tertiary {
+    color: #5B5B5B;
+}
+
+.colourful {
+linear-gradient(to right, #4C64CA, #5F39BC);
+color: #EAEAEA;
+}
+
 .active-button {
     background-color: #E1E5E8;
 }

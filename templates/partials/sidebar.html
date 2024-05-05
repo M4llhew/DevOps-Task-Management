@@ -1,18 +1,18 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+
 <div class="sidebar-container large-bar">
-    <div class="sidebar-expanded inline-column">
-        <div class="header inline-row primary">
+    <div class="sidebar-expanded">
+        <div class="header-container inline-row ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                  class="feather feather-x">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
-            <a href="index.html" class="primary">Mattnobc</a>
+            <a href="index.html" class="user-name">{{ first_name }}</a>
         </div>
-        <div class="navigation inline-column">
-            <a href="login.html" class="option inline-row colourful">
+        <div class="menu inline-column">
+            <a href="login.html" class="navigation-link inline-row colourful">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-home">
@@ -21,7 +21,7 @@
                 </svg>
                 <p>overview</p>
             </a>
-            <a href="project.html" class="option inline-row secondary">
+            <a href="project.html" class="navigation-link inline-row secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-folder">
@@ -30,7 +30,7 @@
                 </svg>
                 <p>projects</p>
             </a>
-            <a href="areas.html" class="option inline-row secondary">
+            <a href="areas.html" class="navigation-link inline-row secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-book-open">
@@ -39,7 +39,7 @@
                 </svg>
                 <p>areas</p>
             </a>
-            <a href="{% url 'calendar-view' %}" class="option inline-row secondary">
+            <a href="{% url 'calendar-view' %}" class="navigation-link inline-row secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-calendar">
@@ -48,11 +48,9 @@
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                     <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
-                <p>calendar</p>
+                <p>upcoming</p>
             </a>
-
-
-            <a href="settings.html" class="option inline-row secondary">
+            <a href="settings.html" class="navigation-link .n inline-row secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-settings">
@@ -67,7 +65,7 @@
         <div class="profile">
             <div class="container inline-row">
                 <img width="45" height="45">
-                <div class="userinfo inline-column">
+                <div class="user-info inline-column">
                     <p class="name secondary">matthew noble</p>
                     <p class="job tertiary">software engineer</p>
                 </div>

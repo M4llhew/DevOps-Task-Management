@@ -125,9 +125,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Add the project-level templates directory
-    os.path.join(BASE_DIR, 'tasks', 'static'),  # Add the tasks app templates directory
-    os.path.join(BASE_DIR, 'users', 'static'),  # Add the users app templates directory
+    os.path.join(BASE_DIR, 'static', 'mysite'),  # Add the project-level templates directory
+    os.path.join(BASE_DIR, 'tasks', 'static', 'tasks'),  # Add the tasks app templates directory
+    os.path.join(BASE_DIR, 'users', 'static', 'users'),  # Add the users app templates directory
 ]
 
 # Default primary key field type
