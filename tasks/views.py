@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from tasks.models import Task
 from tasks.forms import TaskForm
 from django.template.loader import render_to_string
+from django.contrib.auth.decorators import login_required
 
 
 def create_task(request):
@@ -22,6 +23,7 @@ def create_task(request):
         return render(request, 'tasks/create_task.html', context)
 
 
+@login_required
 class SidebarView(TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = super(SidebarView, self).get_context_data(**kwargs)
@@ -61,6 +63,3 @@ class CalendarView(SidebarView):
             'sunday',
         ]
         return context
-
-
-
