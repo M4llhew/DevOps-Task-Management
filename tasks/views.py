@@ -26,7 +26,8 @@ class SidebarView(TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = super(SidebarView, self).get_context_data(**kwargs)
         context['show_sidebar'] = True  # or any value you want to pass
-        context['first_name'] = self.request.user.first_name
+        if self.request.user.is_authenticated:
+            context['first_name'] = self.request.user.first_name
         return context
 
 
