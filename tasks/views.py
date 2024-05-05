@@ -23,7 +23,6 @@ def create_task(request):
         return render(request, 'tasks/create_task.html', context)
 
 
-@login_required
 class SidebarView(TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = super(SidebarView, self).get_context_data(**kwargs)
