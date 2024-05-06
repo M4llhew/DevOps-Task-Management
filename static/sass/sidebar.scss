@@ -10,7 +10,7 @@
 }
 
 .large-bar {
-    min-width: fit-content;
+    width: 85%;
 }
 
 svg {
@@ -20,6 +20,7 @@ svg {
 .sidebar-container {
     position: relative;
     height: 100%;
+    width: 100%;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
@@ -27,7 +28,7 @@ svg {
 .sidebar-expanded {
     @include constants.inline-column;
     background-color: constants.$background-color;
-    width: fit-content;
+    width: 85%;
     height: 100%;
     text-transform: capitalize;
     margin-right: 30px;
@@ -104,9 +105,9 @@ svg {
         height: 125px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        margin-top: auto;
+        margin: auto 0 0 15px;
 
         .container {
             margin: 15px 5px 15px 0;

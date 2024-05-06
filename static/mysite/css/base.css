@@ -166,7 +166,9 @@ color: #EAEAEA;
 
 
 
-
+nav {
+    width: 85%;
+}
 
 
 
@@ -321,11 +323,6 @@ body main .section-container .input-container .gentle-padding {
     outline: none;
 }
 
-.test2 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
 
 
 
