@@ -39,7 +39,7 @@ svg {
         padding: 15px 0px 20px 25px;
         width: inherit;
         border-bottom: 3px solid constants.$border-color;
-        font-size: 16px;
+        font-size: 2rem;
         height: 100px;
         color: constants.$primary-color;
 
@@ -65,7 +65,7 @@ svg {
     .menu {
         @include constants.inline-column;
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 2rem;
         height: 100%;
         border-bottom: 3px solid constants.$border-color;
 
@@ -127,7 +127,7 @@ svg {
         }
 
         .name {
-            font-size: 12px;
+            font-size: 1rem;
             line-height: 1;
             max-width: 150px;
             overflow: hidden;
@@ -136,7 +136,7 @@ svg {
         }
 
         .job {
-            font-size: 8px;
+            font-size: 1rem;
             line-height: 1.2;
             max-width: 150px;
             overflow: hidden;

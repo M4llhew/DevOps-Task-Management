@@ -39,7 +39,7 @@ svg {
   padding: 15px 0px 20px 25px;
   width: inherit;
   border-bottom: 3px solid #E1E5E8;
-  font-size: 16px;
+  font-size: 2rem;
   height: 100px;
   color: #000000;
 }
@@ -61,7 +61,7 @@ svg {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 2rem;
   height: 100%;
   border-bottom: 3px solid #E1E5E8;
 }
@@ -113,7 +113,7 @@ svg {
   min-width: 150px;
 }
 .sidebar-expanded .profile .name {
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 1;
   max-width: 150px;
   overflow: hidden;
@@ -121,7 +121,7 @@ svg {
   white-space: nowrap;
 }
 .sidebar-expanded .profile .job {
-  font-size: 8px;
+  font-size: 1rem;
   line-height: 1.2;
   max-width: 150px;
   overflow: hidden;
