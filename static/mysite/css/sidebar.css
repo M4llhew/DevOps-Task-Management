@@ -8,7 +8,7 @@
 }
 
 .large-bar {
-  min-width: 300px;
+  min-width: fit-content;
 }
 
 svg {
@@ -26,7 +26,7 @@ svg {
   display: flex;
   flex-direction: column;
   background-color: #F5F5F5;
-  width: 300px;
+  width: fit-content;
   height: 100%;
   text-transform: capitalize;
   margin-right: 30px;
@@ -63,6 +63,7 @@ svg {
   margin-top: 10px;
   font-size: 2rem;
   height: 100%;
+  width: 100%;
   border-bottom: 3px solid #E1E5E8;
 }
 .sidebar-expanded .menu .navigation-link:last-child {
@@ -76,6 +77,9 @@ svg {
 }
 .sidebar-expanded .menu .navigation-link svg {
   margin-right: 10px;
+}
+.sidebar-expanded .menu .navigation-link p {
+  margin-right: 25px;
 }
 .sidebar-expanded .menu .navigation:hover {
   cursor: pointer;

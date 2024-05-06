@@ -10,7 +10,7 @@
 }
 
 .large-bar {
-    min-width: 300px;
+    min-width: fit-content;
 }
 
 svg {
@@ -27,7 +27,7 @@ svg {
 .sidebar-expanded {
     @include constants.inline-column;
     background-color: constants.$background-color;
-    width: 300px;
+    width: fit-content;
     height: 100%;
     text-transform: capitalize;
     margin-right: 30px;
@@ -67,6 +67,7 @@ svg {
         margin-top: 10px;
         font-size: 2rem;
         height: 100%;
+        width: 100%;
         border-bottom: 3px solid constants.$border-color;
 
         .navigation-link:last-child {
@@ -81,6 +82,10 @@ svg {
 
             svg {
                 margin-right: 10px;
+            }
+
+            p {
+                margin-right: 25px;
             }
         }
 
