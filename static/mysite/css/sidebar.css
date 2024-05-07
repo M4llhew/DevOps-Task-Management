@@ -1,12 +1,3 @@
-.colourful {
-  background: linear-gradient(to right, #4C64CA, #5F39BC);
-  color: #EAEAEA;
-}
-
-.small-bar {
-  min-width: 55px;
-}
-
 svg {
   transition: stroke-width 0.2s ease;
 }
@@ -32,14 +23,26 @@ svg {
   flex-direction: row;
   display: flex;
   align-items: center;
-  padding: 15px 0px 20px 25px;
+  margin-bottom: 32px;
   width: inherit;
   font-size: 2rem;
-  height: 100px;
+  height: fit-content;
   color: #000000;
 }
+.sidebar-expanded .header-container .header-logo {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 32px;
+}
+.sidebar-expanded .header-container .company-name {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
 .sidebar-expanded .header-container .feather-x {
-  margin-right: 10px;
+  margin-left: auto;
+  stroke-width: 3;
+  width: 2rem;
+  height: 100%;
 }
 .sidebar-expanded .header-container .feather-x:hover {
   cursor: pointer;
@@ -114,27 +117,6 @@ svg {
 .sidebar-expanded .menu .navigation-link:last-child {
   margin-top: auto;
 }
-.sidebar-expanded .menu .navigation-selected {
-  display: flex;
-  flex-direction: row;
-  color: #000000;
-  border-radius: 20px;
-  background-color: #EFEFEF;
-  margin-bottom: 32px;
-  padding: 16px 12px;
-}
-.sidebar-expanded .menu .navigation-selected svg {
-  margin-right: 1rem;
-  width: 3rem;
-  height: 100%;
-  stroke-width: 3;
-  margin-left: 32px;
-  padding-bottom: 4px;
-}
-.sidebar-expanded .menu .navigation-selected p {
-  margin-right: 25px;
-  font-weight: 550;
-}
 .sidebar-expanded .menu .navigation-link {
   display: flex;
   flex-direction: row;
@@ -143,16 +125,12 @@ svg {
   padding: 16px 12px;
 }
 .sidebar-expanded .menu .navigation-link svg {
-  margin-right: 1rem;
+  margin-right: 24px;
   width: 3rem;
   height: 100%;
-  stroke-width: 3;
+  stroke-width: 2;
   margin-left: 32px;
   padding-bottom: 4px;
-}
-.sidebar-expanded .menu .navigation-link p {
-  margin-right: 25px;
-  font-weight: 550;
 }
 .sidebar-expanded .menu .navigation-link:hover {
   cursor: pointer;
@@ -161,6 +139,13 @@ svg {
 }
 .sidebar-expanded .menu .navigation-link:hover svg {
   stroke-width: 3;
+}
+.sidebar-expanded .menu .selected {
+  display: flex;
+  flex-direction: row;
+  color: #000000;
+  border-radius: 20px;
+  background-color: #EFEFEF;
 }
 .sidebar-expanded .profile {
   height: fit-content;

@@ -1,18 +1,5 @@
 @use 'constants';
 
-.colourful {
-    background: constants.$colourful-background;
-    color: constants.$colourful-color;
-}
-
-.small-bar {
-    min-width: 55px;
-}
-
-// .large-bar {
-//     width: 85%;
-// }
-
 svg {
     transition: stroke-width 0.2s ease;
 }
@@ -37,15 +24,29 @@ svg {
         @include constants.inline-row;
         display: flex;
         align-items: center;
-        padding: 15px 0px 20px 25px;
+//         padding: 15px 0px 20px 25px;
+        margin-bottom: 32px;
         width: inherit;
-//         border-bottom: 3px solid constants.$border-color;
         font-size: 2rem;
-        height: 100px;
+        height: fit-content;
         color: constants.$primary-color;
 
+        .header-logo {
+            width: 5rem;
+            height: 5rem;
+            margin-right: 32px;
+        }
+
+        .company-name {
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+
         .feather-x {
-            margin-right: 10px;
+            margin-left: auto;
+            stroke-width: 3;
+            width: 2rem;
+            height: 100%
         }
 
         .feather-x:hover {
@@ -69,7 +70,6 @@ svg {
         width: 100%;
         padding: 12px 0px;
         justify-content: center;
-//         border: solid 1px #151F2A;
         border-radius: 20px;
         font-size: 3rem;
         color: constants.$background-color;
@@ -131,49 +131,21 @@ svg {
             margin-top: auto;
         }
 
-        .navigation-selected {
-            @include constants.inline-row;
-            color: constants.$primary-color;
-            border-radius: 20px;
-            background-color: #EFEFEF;
-            margin-bottom: 32px;
-            padding: 16px 12px;
 
-            svg {
-                margin-right: 1rem;
-                width: 3rem;
-                height: 100%;
-                stroke-width: 3;
-                margin-left: 32px;
-                padding-bottom: 4px;
-            }
-
-            p {
-                margin-right: 25px;
-                font-weight: 550;
-            }
-        }
 
         .navigation-link {
             @include constants.inline-row;
             color: constants.$tertiary-color;
-//             border-radius: 10px;
-//             background-color: #EFEFEF;
             margin-bottom: 32px;
             padding: 16px 12px;
 
             svg {
-                margin-right: 1rem;
+                margin-right: 24px;
                 width: 3rem;
                 height: 100%;
-                stroke-width: 3;
+                stroke-width: 2;
                 margin-left: 32px;
                 padding-bottom: 4px;
-            }
-
-            p {
-                margin-right: 25px;
-                font-weight: 550;
             }
         }
 
@@ -185,6 +157,13 @@ svg {
             svg {
                 stroke-width: 3;
             }
+        }
+
+        .selected {
+            @include constants.inline-row;
+            color: constants.$primary-color;
+            border-radius: 20px;
+            background-color: #EFEFEF;
         }
     }
 
@@ -230,46 +209,6 @@ svg {
             text-transform: lowercase;
             line-height: 1;
         }
-
-
-
-
-
-//         .container {
-//             margin-bottom: 16px;
-//             background-color: #E1E5E8;
-//             border-radius: 20px;
-//             padding: 10px;
-//         }
-
-//
-//         svg:hover {
-//             cursor: pointer;
-//             stroke-width: 3;
-//         }
-//
-//         .user-info {
-//             margin-right: 10px;
-//             min-width: 150px;
-//         }
-//
-//         .name {
-//             font-size: 1rem;
-//             line-height: 1;
-//             max-width: 150px;
-//             overflow: hidden;
-//             text-overflow: ellipsis;
-//             white-space: nowrap;
-//         }
-//
-//         .job {
-//             font-size: 1rem;
-//             line-height: 1.2;
-//             max-width: 150px;
-//             overflow: hidden;
-//             text-overflow: ellipsis;
-//             white-space: nowrap;
-//         }
     }
 }
 
