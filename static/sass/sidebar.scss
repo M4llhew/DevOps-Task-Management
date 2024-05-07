@@ -9,9 +9,9 @@
     min-width: 55px;
 }
 
-.large-bar {
-    width: 85%;
-}
+// .large-bar {
+//     width: 85%;
+// }
 
 svg {
     transition: stroke-width 0.2s ease;
@@ -20,18 +20,18 @@ svg {
 .sidebar-container {
     position: relative;
     height: 100%;
-    width: 100%;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .sidebar-expanded {
     @include constants.inline-column;
-    background-color: constants.$background-color;
-    width: 85%;
+    background: constants.$background-color;
+    width: 100%;
     height: 100%;
     text-transform: capitalize;
-    margin-right: 30px;
+    padding: 64px;
 
     .header-container {
         @include constants.inline-row;
@@ -39,7 +39,7 @@ svg {
         align-items: center;
         padding: 15px 0px 20px 25px;
         width: inherit;
-        border-bottom: 3px solid constants.$border-color;
+//         border-bottom: 3px solid constants.$border-color;
         font-size: 2rem;
         height: 100px;
         color: constants.$primary-color;
@@ -63,36 +63,99 @@ svg {
         }
     }
 
+    .new-task-button {
+        @include constants.inline-row;
+        background-color: #2C353F;
+        width: 100%;
+        padding: 12px 0px;
+        justify-content: center;
+        border: solid 1px #151F2A;
+        border-radius: 10px;
+        font-size: 3rem;
+        color: constants.$background-color;
+        margin-bottom: 20px;
+        font-weight: 300;
+
+        svg {
+            width: 3rem;
+            height: 100%;
+            margin-right: 16px;
+        }
+
+        p {
+            text-transform: capitalize;
+        }
+    }
+
+    .menu-title {
+        color: #6C7B91;
+        font-size: 2rem;
+        font-weight: 550;
+        margin-bottom: 10px;
+    }
+
     .menu {
         @include constants.inline-column;
         margin-top: 10px;
-        font-size: 2rem;
+        font-size: 3rem;
+        text-transform: capitalize;
         height: 100%;
         width: 100%;
-        border-bottom: 3px solid constants.$border-color;
+//         border-bottom: 3px solid constants.$border-color;
 
-        .navigation-link:last-child {
-            margin: auto 20px 5px 10px;
-        }
+//         .navigation-link:last-child {
+//             margin: auto 20px 5px 10px;
+//         }
 
-        .navigation-link {
-            padding: 5px 0 5px 15px;
-            margin-left: 10px;
-            margin-right: 20px;
-            border-radius: 25px;
+        .navigation-selected {
+            @include constants.inline-row;
+            color: constants.$primary-color;
+            border-radius: 10px;
+            background-color: #EFEFEF;
+            margin-bottom: 32px;
+            padding: 16px 12px;
 
             svg {
-                margin-right: 10px;
+                margin-right: 1rem;
+                width: 3rem;
+                height: 100%;
+                stroke-width: 3;
+                margin-left: 32px;
+                padding-bottom: 4px;
             }
 
             p {
                 margin-right: 25px;
+                font-weight: 550;
             }
         }
 
-        .navigation:hover {
+        .navigation-link {
+            @include constants.inline-row;
+            color: constants.$tertiary-color;
+//             border-radius: 10px;
+//             background-color: #EFEFEF;
+            margin-bottom: 32px;
+            padding: 16px 12px;
+
+            svg {
+                margin-right: 1rem;
+                width: 3rem;
+                height: 100%;
+                stroke-width: 3;
+                margin-left: 32px;
+                padding-bottom: 4px;
+            }
+
+            p {
+                margin-right: 25px;
+                font-weight: 550;
+            }
+        }
+
+        .navigation-link:hover {
             cursor: pointer;
-            font-weight: 700;
+            font-weight: 600;
             transition: font-weight 0.2s ease;
 
             svg {
@@ -151,4 +214,5 @@ svg {
         }
     }
 }
+
 

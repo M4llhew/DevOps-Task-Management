@@ -7,10 +7,6 @@
   min-width: 55px;
 }
 
-.large-bar {
-  width: 85%;
-}
-
 svg {
   transition: stroke-width 0.2s ease;
 }
@@ -18,7 +14,6 @@ svg {
 .sidebar-container {
   position: relative;
   height: 100%;
-  width: 100%;
   transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
@@ -26,11 +21,11 @@ svg {
 .sidebar-expanded {
   display: flex;
   flex-direction: column;
-  background-color: #F5F5F5;
-  width: 85%;
+  background: #FFFFFF;
+  width: 100%;
   height: 100%;
   text-transform: capitalize;
-  margin-right: 30px;
+  padding: 64px;
 }
 .sidebar-expanded .header-container {
   display: flex;
@@ -39,7 +34,6 @@ svg {
   align-items: center;
   padding: 15px 0px 20px 25px;
   width: inherit;
-  border-bottom: 3px solid #E1E5E8;
   font-size: 2rem;
   height: 100px;
   color: #000000;
@@ -58,36 +52,89 @@ svg {
   font-weight: 600;
   cursor: pointer;
 }
+.sidebar-expanded .new-task-button {
+  display: flex;
+  flex-direction: row;
+  background-color: #2C353F;
+  width: 100%;
+  padding: 12px 0px;
+  justify-content: center;
+  border: solid 1px #151F2A;
+  border-radius: 10px;
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.sidebar-expanded .new-task-button svg {
+  width: 3rem;
+  height: 100%;
+  margin-right: 16px;
+}
+.sidebar-expanded .new-task-button p {
+  text-transform: capitalize;
+}
+.sidebar-expanded .menu-title {
+  color: #6C7B91;
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
 .sidebar-expanded .menu {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
+  text-transform: capitalize;
   height: 100%;
   width: 100%;
-  border-bottom: 3px solid #E1E5E8;
 }
-.sidebar-expanded .menu .navigation-link:last-child {
-  margin: auto 20px 5px 10px;
+.sidebar-expanded .menu .navigation-selected {
+  display: flex;
+  flex-direction: row;
+  color: #000000;
+  border-radius: 10px;
+  background-color: #EFEFEF;
+  margin-bottom: 32px;
+  padding: 16px 12px;
+}
+.sidebar-expanded .menu .navigation-selected svg {
+  margin-right: 1rem;
+  width: 3rem;
+  height: 100%;
+  stroke-width: 3;
+  margin-left: 32px;
+  padding-bottom: 4px;
+}
+.sidebar-expanded .menu .navigation-selected p {
+  margin-right: 25px;
+  font-weight: 550;
 }
 .sidebar-expanded .menu .navigation-link {
-  padding: 5px 0 5px 15px;
-  margin-left: 10px;
-  margin-right: 20px;
-  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  color: #5B5B5B;
+  margin-bottom: 32px;
+  padding: 16px 12px;
 }
 .sidebar-expanded .menu .navigation-link svg {
-  margin-right: 10px;
+  margin-right: 1rem;
+  width: 3rem;
+  height: 100%;
+  stroke-width: 3;
+  margin-left: 32px;
+  padding-bottom: 4px;
 }
 .sidebar-expanded .menu .navigation-link p {
   margin-right: 25px;
+  font-weight: 550;
 }
-.sidebar-expanded .menu .navigation:hover {
+.sidebar-expanded .menu .navigation-link:hover {
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   transition: font-weight 0.2s ease;
 }
-.sidebar-expanded .menu .navigation:hover svg {
+.sidebar-expanded .menu .navigation-link:hover svg {
   stroke-width: 3;
 }
 .sidebar-expanded .profile {
