@@ -59,8 +59,7 @@ svg {
   width: 100%;
   padding: 12px 0px;
   justify-content: center;
-  border: solid 1px #151F2A;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 3rem;
   color: #FFFFFF;
   margin-bottom: 20px;
@@ -74,9 +73,30 @@ svg {
 .sidebar-expanded .new-task-button p {
   text-transform: capitalize;
 }
-.sidebar-expanded .menu-title {
+.sidebar-expanded .logout-button {
+  display: flex;
+  flex-direction: row;
+  background-color: #EFEFEF;
+  width: 100%;
+  padding: 12px 0px;
+  justify-content: center;
+  border-radius: 20px;
+  border: none;
+  font-size: 2.5rem;
+  color: #000000;
+  font-weight: 300;
+}
+.sidebar-expanded .logout-button svg {
+  width: 2.5rem;
+  height: 100%;
+  margin-right: 16px;
+}
+.sidebar-expanded .logout-button p {
+  text-transform: capitalize;
+}
+.sidebar-expanded .header-text {
   color: #6C7B91;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 550;
   margin-bottom: 10px;
 }
@@ -88,12 +108,17 @@ svg {
   text-transform: capitalize;
   height: 100%;
   width: 100%;
+  border-bottom: 3px solid #E1E5E8;
+  margin-bottom: 32px;
+}
+.sidebar-expanded .menu .navigation-link:last-child {
+  margin-top: auto;
 }
 .sidebar-expanded .menu .navigation-selected {
   display: flex;
   flex-direction: row;
   color: #000000;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #EFEFEF;
   margin-bottom: 32px;
   padding: 16px 12px;
@@ -138,47 +163,44 @@ svg {
   stroke-width: 3;
 }
 .sidebar-expanded .profile {
-  height: 125px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: auto 0 0 15px;
-}
-.sidebar-expanded .profile .container {
-  margin: 15px 5px 15px 0;
-  background-color: #E1E5E8;
-  border-radius: 20px;
-  padding: 10px;
+  margin-top: auto;
 }
 .sidebar-expanded .profile img {
-  background-color: #0085FF;
-  border-radius: 50%;
-  margin-right: 10px;
+  background-color: blue;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50px;
+  margin-right: 16px;
 }
-.sidebar-expanded .profile svg:hover {
-  cursor: pointer;
-  stroke-width: 3;
+.sidebar-expanded .profile .profile-content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 64px;
+  margin-top: 16px;
 }
-.sidebar-expanded .profile .user-info {
-  margin-right: 10px;
-  min-width: 150px;
+.sidebar-expanded .profile .profile-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.5rem;
+  height: 100%;
 }
-.sidebar-expanded .profile .name {
-  font-size: 1rem;
+.sidebar-expanded .profile .profile-name {
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 550;
   line-height: 1;
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-bottom: 4px;
 }
-.sidebar-expanded .profile .job {
-  font-size: 1rem;
-  line-height: 1.2;
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.sidebar-expanded .profile .profile-email {
+  color: #5B5B5B;
+  text-transform: lowercase;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=sidebar.css.map */
