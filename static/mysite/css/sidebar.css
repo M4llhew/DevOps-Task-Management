@@ -37,6 +37,7 @@ svg {
 .sidebar-expanded .header-container .company-name {
   font-size: 4rem;
   text-transform: uppercase;
+  font-weight: 550;
 }
 .sidebar-expanded .header-container .feather-x {
   margin-left: auto;
