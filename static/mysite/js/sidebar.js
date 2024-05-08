@@ -5,11 +5,9 @@ const SidebarContainer = document.querySelector('.sidebar-container');
 // Function to toggle between expanded and collapsed sidebars
 function toggleSidebar() {
     console.log('Toggle Sidebar called'); // Check if this log appears in the console
-    expandedSidebar.classList.toggle('translate-x');
-    collapsedSidebar.classList.toggle('translate-x');
-    // SidebarContainer.classList.toggle('move-bar');
-    SidebarContainer.classList.toggle('large-bar');
-    SidebarContainer.classList.toggle('small-bar');
+    console.log("clicked")
+    expandedSidebar.classList.toggle('hide');
+    collapsedSidebar.classList.toggle('hide');
 }
 
 // Add click event listener to the menu button or any other element triggering the toggle
@@ -24,10 +22,14 @@ function toggleSidebar() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Your code here
-    const menuButton = document.querySelector('svg.feather-menu');
-    const closeButton = document.querySelector('svg.feather-x')
-    menuButton.addEventListener('click', toggleSidebar);
-    menuButton.addEventListener('touchstart', toggleSidebar);
+//    const menuButton = document.querySelector('.header-logo');
+
+
+    const openButton = document.querySelector('.sidebar-closed-button');
+    const closeButton = document.querySelector('.sidebar-opened-button');
+    console.log(openButton, closeButton, "Test")
+    openButton.addEventListener('click', toggleSidebar);
+    openButton.addEventListener('touchstart', toggleSidebar);
     closeButton.addEventListener('click', toggleSidebar);
     closeButton.addEventListener('touchstart', toggleSidebar);
 });
