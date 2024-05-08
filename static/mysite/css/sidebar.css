@@ -220,6 +220,7 @@ form {
   position: relative;
   transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  min-width: 15rem;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
