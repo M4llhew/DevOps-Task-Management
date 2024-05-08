@@ -16,6 +16,7 @@ form {
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
   max-width: 15rem;
   min-width: 12rem;
+  min-height: 100vh;
   background: #FFFFFF;
 }
 
@@ -25,6 +26,7 @@ form {
   width: 100%;
   text-transform: capitalize;
   padding: 1rem;
+  min-height: 100%;
 }
 .sidebar-expanded .header-container {
   display: flex;
@@ -145,7 +147,7 @@ form {
   flex-direction: column;
   font-size: 1rem;
   text-transform: capitalize;
-  height: 100%;
+  flex-grow: 1;
   width: 100%;
   border-bottom: 0.1875rem solid #E1E5E8;
   margin-bottom: 1rem;
@@ -159,6 +161,7 @@ form {
   color: #5B5B5B;
   margin-bottom: 0.3rem;
   padding: 0.4rem 0.5rem;
+  align-items: center;
 }
 .sidebar-expanded .menu .navigation-link svg {
   margin-right: 0.5rem;
