@@ -33,7 +33,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  max-height: 100vh;
+  height: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   margin: 0;
@@ -169,6 +169,7 @@ color: #EAEAEA;
 
 nav {
     width: 85%;
+    height: 100%;
 }
 
 

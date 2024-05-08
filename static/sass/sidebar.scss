@@ -9,7 +9,7 @@ svg {
     height: 100%;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-
+    max-width: 15rem;
 }
 
 .sidebar-expanded {
@@ -18,41 +18,40 @@ svg {
     width: 100%;
     height: 100%;
     text-transform: capitalize;
-    padding: 64px;
+    padding: 1rem;
 
     .header-container {
         @include constants.inline-row;
         display: flex;
         align-items: center;
 //         padding: 15px 0px 20px 25px;
-        margin-bottom: 32px;
-        width: inherit;
-        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
         height: fit-content;
         color: constants.$primary-color;
 
         .header-logo {
-            width: 5rem;
-            height: 5rem;
-            margin-right: 32px;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 2rem;
         }
 
         .company-name {
-            font-size: 4rem;
+            font-size: 1rem;
             text-transform: uppercase;
             font-weight: 550;
         }
 
         .feather-x {
             margin-left: auto;
-            stroke-width: 3;
-            width: 2rem;
+            stroke-width: 0.1875rem;
+            width: 1rem;
             height: 100%
         }
 
         .feather-x:hover {
             cursor: pointer;
-            stroke-width: 3;
+            stroke-width: 0.1875rem;
         }
 
         .user-name {
@@ -69,18 +68,18 @@ svg {
         @include constants.inline-row;
         background-color: #2C353F;
         width: 100%;
-        padding: 12px 0px;
+        padding: 0.5rem 0px;
         justify-content: center;
-        border-radius: 20px;
-        font-size: 3rem;
+        border-radius: 1.25rem;
+        font-size: 1rem;
         color: constants.$background-color;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
         font-weight: 300;
 
         svg {
-            width: 3rem;
+            width: 1rem;
             height: 100%;
-            margin-right: 16px;
+            margin-right: 1rem;
         }
 
         p {
@@ -92,18 +91,18 @@ svg {
         @include constants.inline-row;
         background-color: #EFEFEF;
         width: 100%;
-        padding: 12px 0px;
+        padding: 0.75rem 0px;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         border: none;
-        font-size: 2.5rem;
+        font-size: 1rem;
         color: constants.$primary-color;
         font-weight: 300;
 
         svg {
-            width: 2.5rem;
+            width: 1rem;
             height: 100%;
-            margin-right: 16px;
+            margin-right: 1rem;
         }
 
         p {
@@ -113,20 +112,20 @@ svg {
 
     .header-text {
         color: #6C7B91;
-        font-size: 2.5rem;
+        font-size: 1rem;
         font-weight: 550;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 
     .menu {
         @include constants.inline-column;
-        margin-top: 10px;
-        font-size: 3rem;
+        margin-top: 0.625rem;
+        font-size: 1rem;
         text-transform: capitalize;
         height: 100%;
         width: 100%;
-        border-bottom: 3px solid constants.$border-color;
-        margin-bottom: 32px;
+        border-bottom: 0.1875rem solid constants.$border-color;
+        margin-bottom: 1rem;
 
         .navigation-link:last-child {
             margin-top: auto;
@@ -137,16 +136,16 @@ svg {
         .navigation-link {
             @include constants.inline-row;
             color: constants.$tertiary-color;
-            margin-bottom: 32px;
-            padding: 16px 12px;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0.75rem;
 
             svg {
-                margin-right: 24px;
-                width: 3rem;
+                margin-right: 0.75rem;
+                width: 1rem;
                 height: 100%;
-                stroke-width: 2;
-                margin-left: 32px;
-                padding-bottom: 4px;
+                stroke-width: 0.125rem;
+                margin-left: 0.5rem;
+                padding-bottom: 0.25rem;
             }
         }
 
@@ -156,14 +155,14 @@ svg {
             transition: font-weight 0.2s ease;
 
             svg {
-                stroke-width: 3;
+                stroke-width: 0.1875rem;
             }
         }
 
         .selected {
             @include constants.inline-row;
             color: constants.$primary-color;
-            border-radius: 20px;
+            border-radius: 1.25rem;
             background-color: #EFEFEF;
         }
     }
@@ -178,22 +177,21 @@ svg {
 
         img {
             background-color: blue;
-            width: 6rem;
-            height: 6rem;
-            border-radius: 50px;
-            margin-right: 16px;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 3.125rem;
+            margin-right: 1rem;
         }
 
         .profile-content {
             @include constants.inline-row;
-            margin-bottom: 64px;
-            margin-top: 16px;
+            margin-bottom: 1rem;
         }
 
         .profile-text {
             @include constants.inline-column;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 1rem;
             height: 100%;
         }
 
@@ -202,7 +200,7 @@ svg {
             text-transform: capitalize;
             font-weight: 550;
             line-height: 1;
-            margin-bottom: 4px;
+            margin-bottom: 0.25rem;
         }
 
         .profile-email {
