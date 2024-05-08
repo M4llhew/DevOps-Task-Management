@@ -44,6 +44,8 @@ form {
     width: 100%;
 }
 
+
+
 .header-logo {
     width: 1.5rem;
     height: 1.5rem;
@@ -219,10 +221,8 @@ form {
     position: relative;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-//     max-width: 15rem;
     min-width: 15rem;
     min-height: 100vh;
-
     display: flex;
     flex-direction: row;
 }
@@ -235,8 +235,6 @@ form {
     padding: 1rem;
     min-height: 100%;
     background: constants.$background-color;
-
-
 }
 
 .sidebar-collapsed {
@@ -245,6 +243,9 @@ form {
     padding: 1rem;
     background: constants.$background-color;
     text-transform: capitalize;
+    min-width: 5.125rem;
+
+
 
     .header-logo {
         width: 1.5rem;
@@ -298,4 +299,6 @@ form {
     display: none;
 }
 
-
+.collapsed-size {
+    min-width: 5.125rem;
+}

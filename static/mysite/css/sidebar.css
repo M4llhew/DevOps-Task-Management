@@ -242,6 +242,7 @@ form {
   padding: 1rem;
   background: #FFFFFF;
   text-transform: capitalize;
+  min-width: 5.125rem;
 }
 .sidebar-collapsed .header-logo {
   width: 1.5rem;
@@ -283,6 +284,10 @@ form {
 
 .hide {
   display: none;
+}
+
+.collapsed-size {
+  min-width: 5.125rem;
 }
 
 /*# sourceMappingURL=sidebar.css.map */
