@@ -29,6 +29,7 @@ class SidebarView(TemplateView):
         context['show_sidebar'] = True  # or any value you want to pass
         if self.request.user.is_authenticated:
             context['first_name'] = self.request.user.first_name
+            context['email'] = self.request.user.email
         return context
 
 

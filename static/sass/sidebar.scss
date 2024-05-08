@@ -1,22 +1,61 @@
 @use 'constants';
 
+@mixin button-styles {
+    @include constants.inline-row;
+    width: 100%;
+    padding: 0.25rem 0px;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+
+        p {
+            font-weight: 550;
+        }
+
+        svg {
+            stroke-width: 0.1875rem;
+        }
+    }
+
+    svg {
+            width: 1rem;
+            margin-right: 0.5rem;
+        }
+
+    p {
+        text-transform: capitalize;
+    }
+}
+
 svg {
     transition: stroke-width 0.2s ease;
 }
 
+p {
+    transition: font-weight 0.2s ease;
+}
+
+form {
+    width: 100%;
+}
+
 .sidebar-container {
     position: relative;
-    height: 100%;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
     max-width: 15rem;
+    min-width: 12rem;
+    background: constants.$background-color;
 }
 
 .sidebar-expanded {
     @include constants.inline-column;
-    background: constants.$background-color;
     width: 100%;
-    height: 100%;
     text-transform: capitalize;
     padding: 1rem;
 
@@ -24,7 +63,6 @@ svg {
         @include constants.inline-row;
         display: flex;
         align-items: center;
-//         padding: 15px 0px 20px 25px;
         margin-bottom: 0.5rem;
         font-size: 1rem;
         height: fit-content;
@@ -46,12 +84,14 @@ svg {
             margin-left: auto;
             stroke-width: 0.1875rem;
             width: 1rem;
-            height: 100%
+            height: 100%;
+            color: constants.$secondary-color;
         }
 
         .feather-x:hover {
             cursor: pointer;
-            stroke-width: 0.1875rem;
+            stroke-width: 0.25rem;
+            color: constants.$primary-color;
         }
 
         .user-name {
@@ -65,48 +105,25 @@ svg {
     }
 
     .new-task-button {
+        @include button-styles;
         @include constants.inline-row;
         background-color: #2C353F;
-        width: 100%;
-        padding: 0.25rem 0px;
-        justify-content: center;
-        border-radius: 1.25rem;
-        font-size: 1rem;
         color: constants.$background-color;
-        margin-bottom: 1.25rem;
-        font-weight: 300;
-
-        svg {
-            width: 1rem;
-            height: 100%;
-            margin-right: 0.5rem;
-        }
+        margin-bottom: 0.5rem;
 
         p {
-            text-transform: capitalize;
+            margin-right: 1rem;
         }
     }
 
     .logout-button {
+        @include button-styles;
         @include constants.inline-row;
         background-color: #EFEFEF;
-        width: 100%;
-        padding: 0.25rem 0px;
-        justify-content: center;
-        border-radius: 1.25rem;
-        border: none;
-        font-size: 1rem;
         color: constants.$primary-color;
-        font-weight: 300;
-
-        svg {
-            width: 1rem;
-            height: 100%;
-            margin-right: 0.5rem;
-        }
 
         p {
-            text-transform: capitalize;
+            margin-right: 0.5rem;
         }
     }
 
@@ -114,12 +131,11 @@ svg {
         color: #6C7B91;
         font-size: 1rem;
         font-weight: 550;
-        margin-bottom: 0.625rem;
+        margin-bottom: 0.5rem;
     }
 
     .menu {
         @include constants.inline-column;
-        margin-top: 0.625rem;
         font-size: 1rem;
         text-transform: capitalize;
         height: 100%;
@@ -135,10 +151,10 @@ svg {
             @include constants.inline-row;
             color: constants.$tertiary-color;
             margin-bottom: 0.3rem;
-            padding: 0.4rem 0.75rem;
+            padding: 0.4rem 0.5rem;
 
             svg {
-                margin-right: 0.75rem;
+                margin-right: 0.5rem;
                 width: 1rem;
                 height: 100%;
                 stroke-width: 0.125rem;
@@ -150,7 +166,6 @@ svg {
         .navigation-link:hover {
             cursor: pointer;
             font-weight: 600;
-            transition: font-weight 0.2s ease;
 
             svg {
                 stroke-width: 0.1875rem;
@@ -160,7 +175,7 @@ svg {
         .selected {
             @include constants.inline-row;
             color: constants.$primary-color;
-            border-radius: 1.25rem;
+            border-radius: 0.5rem;
             background-color: #EFEFEF;
         }
     }
@@ -177,33 +192,33 @@ svg {
             background-color: blue;
             width: 2rem;
             height: 2rem;
-            border-radius: 3.125rem;
-            margin-right: 1rem;
+            border-radius: 0.75rem;
+            margin-right: 0.5rem;
         }
 
         .profile-content {
             @include constants.inline-row;
             margin-bottom: 1rem;
+            align-items: center;
         }
 
         .profile-text {
             @include constants.inline-column;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 0.8rem;
+            line-height: 1;
             height: 100%;
         }
 
         .profile-name {
             color: constants.$primary-color;
             text-transform: capitalize;
-            line-height: 1;
             margin-bottom: 0.25rem;
         }
 
         .profile-email {
             color: constants.$tertiary-color;
             text-transform: lowercase;
-            line-height: 1;
         }
     }
 }

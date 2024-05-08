@@ -2,20 +2,27 @@ svg {
   transition: stroke-width 0.2s ease;
 }
 
+p {
+  transition: font-weight 0.2s ease;
+}
+
+form {
+  width: 100%;
+}
+
 .sidebar-container {
   position: relative;
-  height: 100%;
   transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
   max-width: 15rem;
+  min-width: 12rem;
+  background: #FFFFFF;
 }
 
 .sidebar-expanded {
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
   width: 100%;
-  height: 100%;
   text-transform: capitalize;
   padding: 1rem;
 }
@@ -44,10 +51,12 @@ svg {
   stroke-width: 0.1875rem;
   width: 1rem;
   height: 100%;
+  color: #363636;
 }
 .sidebar-expanded .header-container .feather-x:hover {
   cursor: pointer;
-  stroke-width: 0.1875rem;
+  stroke-width: 0.25rem;
+  color: #000000;
 }
 .sidebar-expanded .header-container .user-name {
   color: #000000;
@@ -59,55 +68,81 @@ svg {
 .sidebar-expanded .new-task-button {
   display: flex;
   flex-direction: row;
-  background-color: #2C353F;
   width: 100%;
   padding: 0.25rem 0px;
   justify-content: center;
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
   font-size: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #2C353F;
   color: #FFFFFF;
-  margin-bottom: 1.25rem;
-  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.sidebar-expanded .new-task-button:hover {
+  cursor: pointer;
+}
+.sidebar-expanded .new-task-button:hover p {
+  font-weight: 550;
+}
+.sidebar-expanded .new-task-button:hover svg {
+  stroke-width: 0.1875rem;
 }
 .sidebar-expanded .new-task-button svg {
   width: 1rem;
-  height: 100%;
   margin-right: 0.5rem;
 }
 .sidebar-expanded .new-task-button p {
   text-transform: capitalize;
 }
+.sidebar-expanded .new-task-button p {
+  margin-right: 1rem;
+}
 .sidebar-expanded .logout-button {
   display: flex;
   flex-direction: row;
-  background-color: #EFEFEF;
   width: 100%;
   padding: 0.25rem 0px;
   justify-content: center;
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
   border: none;
   font-size: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #EFEFEF;
   color: #000000;
-  font-weight: 300;
+}
+.sidebar-expanded .logout-button:hover {
+  cursor: pointer;
+}
+.sidebar-expanded .logout-button:hover p {
+  font-weight: 550;
+}
+.sidebar-expanded .logout-button:hover svg {
+  stroke-width: 0.1875rem;
 }
 .sidebar-expanded .logout-button svg {
   width: 1rem;
-  height: 100%;
   margin-right: 0.5rem;
 }
 .sidebar-expanded .logout-button p {
   text-transform: capitalize;
 }
+.sidebar-expanded .logout-button p {
+  margin-right: 0.5rem;
+}
 .sidebar-expanded .header-text {
   color: #6C7B91;
   font-size: 1rem;
   font-weight: 550;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.5rem;
 }
 .sidebar-expanded .menu {
   display: flex;
   flex-direction: column;
-  margin-top: 0.625rem;
   font-size: 1rem;
   text-transform: capitalize;
   height: 100%;
@@ -123,10 +158,10 @@ svg {
   flex-direction: row;
   color: #5B5B5B;
   margin-bottom: 0.3rem;
-  padding: 0.4rem 0.75rem;
+  padding: 0.4rem 0.5rem;
 }
 .sidebar-expanded .menu .navigation-link svg {
-  margin-right: 0.75rem;
+  margin-right: 0.5rem;
   width: 1rem;
   height: 100%;
   stroke-width: 0.125rem;
@@ -136,7 +171,6 @@ svg {
 .sidebar-expanded .menu .navigation-link:hover {
   cursor: pointer;
   font-weight: 600;
-  transition: font-weight 0.2s ease;
 }
 .sidebar-expanded .menu .navigation-link:hover svg {
   stroke-width: 0.1875rem;
@@ -145,7 +179,7 @@ svg {
   display: flex;
   flex-direction: row;
   color: #000000;
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
   background-color: #EFEFEF;
 }
 .sidebar-expanded .profile {
@@ -160,31 +194,31 @@ svg {
   background-color: blue;
   width: 2rem;
   height: 2rem;
-  border-radius: 3.125rem;
-  margin-right: 1rem;
+  border-radius: 0.75rem;
+  margin-right: 0.5rem;
 }
 .sidebar-expanded .profile .profile-content {
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
+  align-items: center;
 }
 .sidebar-expanded .profile .profile-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
   height: 100%;
 }
 .sidebar-expanded .profile .profile-name {
   color: #000000;
   text-transform: capitalize;
-  line-height: 1;
   margin-bottom: 0.25rem;
 }
 .sidebar-expanded .profile .profile-email {
   color: #5B5B5B;
   text-transform: lowercase;
-  line-height: 1;
 }
 
 /*# sourceMappingURL=sidebar.css.map */
