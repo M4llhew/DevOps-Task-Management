@@ -24,18 +24,18 @@ svg {
   flex-direction: row;
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   height: fit-content;
   color: #000000;
 }
 .sidebar-expanded .header-container .header-logo {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
 }
 .sidebar-expanded .header-container .company-name {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 550;
 }
@@ -61,7 +61,7 @@ svg {
   flex-direction: row;
   background-color: #2C353F;
   width: 100%;
-  padding: 0.5rem 0px;
+  padding: 0.25rem 0px;
   justify-content: center;
   border-radius: 1.25rem;
   font-size: 1rem;
@@ -72,7 +72,7 @@ svg {
 .sidebar-expanded .new-task-button svg {
   width: 1rem;
   height: 100%;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .sidebar-expanded .new-task-button p {
   text-transform: capitalize;
@@ -82,7 +82,7 @@ svg {
   flex-direction: row;
   background-color: #EFEFEF;
   width: 100%;
-  padding: 0.75rem 0px;
+  padding: 0.25rem 0px;
   justify-content: center;
   border-radius: 1.25rem;
   border: none;
@@ -93,7 +93,7 @@ svg {
 .sidebar-expanded .logout-button svg {
   width: 1rem;
   height: 100%;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .sidebar-expanded .logout-button p {
   text-transform: capitalize;
@@ -122,8 +122,8 @@ svg {
   display: flex;
   flex-direction: row;
   color: #5B5B5B;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.3rem;
+  padding: 0.4rem 0.75rem;
 }
 .sidebar-expanded .menu .navigation-link svg {
   margin-right: 0.75rem;
@@ -131,7 +131,7 @@ svg {
   height: 100%;
   stroke-width: 0.125rem;
   margin-left: 0.5rem;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.15rem;
 }
 .sidebar-expanded .menu .navigation-link:hover {
   cursor: pointer;
@@ -178,7 +178,6 @@ svg {
 .sidebar-expanded .profile .profile-name {
   color: #000000;
   text-transform: capitalize;
-  font-weight: 550;
   line-height: 1;
   margin-bottom: 0.25rem;
 }
