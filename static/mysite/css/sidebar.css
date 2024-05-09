@@ -329,5 +329,29 @@ ul {
   white-space: nowrap;
   width: 1px;
 }
+.sidebar-collapsed .navigation-link {
+  position: relative; /* Make the parent element of the tooltip relative */
+}
+.sidebar-collapsed .navigation-link:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #2C353F;
+  color: #FFFFFF;
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 999;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.75rem;
+  font-weight: 400;
+  /* Adjust the positioning */
+  top: 50%;
+  left: calc(100% + 10px); /* Move the tooltip to the right of the SVG */
+  transform: translateY(-50%); /* Center the tooltip vertically */
+}
+.sidebar-collapsed .navigation-link:hover::before {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=sidebar.css.map */
