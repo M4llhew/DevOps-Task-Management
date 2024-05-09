@@ -24,6 +24,18 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  list-style-type: none;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    list-style-type: none;
 }
 
 /* Set core root defaults */
@@ -136,9 +148,6 @@ body {
     flex-direction: row;
 }
 
-nav {
-    min-height: 100%;
-}
 
 
 

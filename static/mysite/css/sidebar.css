@@ -290,4 +290,24 @@ form {
   min-width: 5.125rem;
 }
 
+.bottom {
+  margin-top: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /*# sourceMappingURL=sidebar.css.map */
