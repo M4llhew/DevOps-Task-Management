@@ -34,6 +34,7 @@
 
 svg {
     transition: stroke-width 0.2s ease;
+    stroke-width: 0.125rem;
 }
 
 p {
@@ -42,6 +43,24 @@ p {
 
 form {
     width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.collapsed-size {
+    min-width: 5.125rem;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .header-logo {
@@ -132,8 +151,6 @@ form {
     }
 }
 
-
-
 .header-text {
     color: #6C7B91;
     font-size: 1rem;
@@ -217,7 +234,6 @@ form {
     position: relative;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-    min-width: 15rem;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -231,6 +247,11 @@ form {
     padding: 1rem;
     min-height: 100%;
     background: constants.$background-color;
+    min-width: 15rem;
+
+    .sidebar-closed-button {
+        @include constants.visually-hidden;
+    }
 }
 
 .sidebar-collapsed {
@@ -240,14 +261,6 @@ form {
     background: constants.$background-color;
     text-transform: capitalize;
     min-width: 5.125rem;
-
-
-
-    .header-logo {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 0;
-    }
 
     .header-container {
         justify-content: center;
@@ -260,25 +273,22 @@ form {
 
     .new-task-button {
         padding: inherit 0.5rem;
-        svg {
-            margin-right: 0;
-        }
-
         p {
             margin-right: 0;
         }
     }
+
+    svg {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .navigation-link {
         justify-content: center;
     }
 
     .logout-button {
         justift-content: center;
-
-        svg {
-        margin-right: 0;
-
-        }
     }
 
     .profile-image {
@@ -289,32 +299,16 @@ form {
         justify-content: center;
         width: 100%;
     }
-}
 
-.hide {
-    display: none;
-}
+    p {
+        @include constants.visually-hidden
+    }
 
-.collapsed-size {
-    min-width: 5.125rem;
-}
+    .header-logo {
+        @include constants.visually-hidden;
+    }
 
-.bottom {
-    margin-top: auto;
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+    .sidebar-opened-button {
+        @include constants.visually-hidden;
+    }
 }
