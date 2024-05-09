@@ -329,29 +329,42 @@ ul {
   white-space: nowrap;
   width: 1px;
 }
-.sidebar-collapsed .navigation-link {
+.sidebar-collapsed .tooltip {
   position: relative; /* Make the parent element of the tooltip relative */
 }
-.sidebar-collapsed .navigation-link:hover::before {
+.sidebar-collapsed .tooltip:hover::before {
   content: attr(data-tooltip);
+  text-transform: capitalize;
   position: absolute;
   background-color: #2C353F;
   color: #FFFFFF;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   z-index: 999;
   white-space: nowrap;
-  opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 0.75rem;
   font-weight: 400;
-  /* Adjust the positioning */
-  top: 50%;
-  left: calc(100% + 10px); /* Move the tooltip to the right of the SVG */
-  transform: translateY(-50%); /* Center the tooltip vertically */
+  left: calc(100% + 0.25rem); /* Move the tooltip to the right of the SVG */
 }
-.sidebar-collapsed .navigation-link:hover::before {
-  opacity: 1;
+.sidebar-collapsed .tooltip-inverted {
+  position: relative;
+}
+.sidebar-collapsed .tooltip-inverted:hover::before {
+  content: attr(data-tooltip);
+  text-transform: capitalize;
+  position: absolute;
+  background-color: #FFFFFF;
+  color: #2C353F;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 999;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  font-size: 0.75rem;
+  font-weight: 400;
+  left: calc(100% + 0.25rem);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=sidebar.css.map */

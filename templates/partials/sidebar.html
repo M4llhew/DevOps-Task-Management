@@ -20,7 +20,7 @@
             </svg>
         </div>
 
-        <button class="new-task-button">
+        <button class="new-task-button tooltip-inverted" data-tooltip="new task">
             <svg aria-hidden="true" class="feather feather-plus" fill="none"
                  focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@
         <nav class="menu">
             <ul>
                 <li>
-                    <a class="navigation-link selected" href="login.html" data-tooltip="overview">
+                    <a class="navigation-link tooltip selected " href="login.html" data-tooltip="overview">
                         <svg aria-hidden="true" class="feather feather-home" fill="none"
                              focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="navigation-link" href="project.html" data-tooltip="projects">
+                    <a class="navigation-link tooltip" href="project.html" data-tooltip="projects">
                         <svg aria-hidden="true" class="feather feather-folder" fill="none"
                              focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="navigation-link" href="areas.html" data-tooltip="areas">
+                    <a class="navigation-link tooltip" href="areas.html" data-tooltip="areas">
                         <svg aria-hidden="true" class="feather feather-book-open" fill="none"
                              focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="navigation-link" href="{% url 'calendar-view' %}" data-tooltip="upcoming">
+                    <a class="navigation-link tooltip" href="{% url 'calendar-view' %}" data-tooltip="upcoming">
                         <svg aria-hidden="true" class="feather feather-calendar" fill="none"
                              focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li class="bottom">
-                    <a class="navigation-link" href="settings.html" data-tooltip="settings">
+                    <a class="navigation-link tooltip" href="settings.html" data-tooltip="settings">
                         <svg aria-hidden="true" class="feather feather-settings" fill="none" focusable="false"
                              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +104,7 @@
             </div>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
-                <button class="logout-button" type="submit">
+                <button class="logout-button tooltip" type="submit" data-tooltip="log out">
                     <svg class="feather feather-log-out" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
                          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg">
