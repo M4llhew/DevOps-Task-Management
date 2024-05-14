@@ -3,42 +3,34 @@ header {
   min-height: 90px;
   justify-content: center;
 }
-
 header .header-content {
   height: 90px;
   border-bottom: 3px solid #E1E5E8;
 }
-
 header .user-info {
   padding-left: 25px;
   line-height: 1;
 }
-
 header .user-info .welcome-message {
   font-size: 32px;
   margin-bottom: 2px;
 }
-
 header .user-info .current-date {
   font-size: 16px;
 }
-
 header .three-dots {
   margin: 0 25px 0 auto;
   transition: stroke-width 0.2s ease;
 }
-
 header .advanced-options {
   height: 60px;
   border-bottom: 3px solid #E1E5E8;
 }
-
 header .advanced-options .today-button {
   font-size: 18px;
   padding: 6px 25px;
   margin-right: 15px;
 }
-
 header .advanced-options .container {
   display: flex;
   height: 100%;
@@ -46,27 +38,22 @@ header .advanced-options .container {
   padding-left: 25px;
   align-items: center;
 }
-
 header .advanced-options .date-controls svg {
   margin-right: 5px;
 }
-
 header .advanced-options .action-buttons {
   margin-right: 25px;
   margin-left: auto;
 }
-
 header .advanced-options .action-buttons .create-button {
   border: none;
   padding: 10px 15px;
   border-radius: 35px;
   margin-left: 15px;
 }
-
 header .advanced-options .action-buttons .create-text {
   font-size: 20px;
 }
-
 header svg:hover {
   stroke-width: 3;
   cursor: pointer;
@@ -82,20 +69,17 @@ header svg:hover {
   width: 100%;
   height: 100%;
 }
-
 .calendar-grid .content {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
-
 .calendar-grid .day-column {
   height: 100%;
   border-left: 3px solid #EBECEC;
   width: 100%;
 }
-
 .calendar-grid .day-column .column-header {
   width: 100%;
   border-bottom: 3px solid #EBECEC;
@@ -104,17 +88,14 @@ header svg:hover {
   align-items: center;
   padding: 10px 0px 5px 0px;
 }
-
 .calendar-grid .day-column .column-content {
   width: 100%;
   padding: 0 25px;
   height: 100%;
 }
-
 .calendar-grid .day-column p {
   padding-bottom: 5px;
 }
-
 .calendar-grid .day-column:first-child {
   border: none;
 }
@@ -124,7 +105,6 @@ header svg:hover {
   border: 3px solid #EBECEC;
   margin-top: 10px;
 }
-
 .draggable-task-container .task-details {
   border-left: 10px solid #ABE7B8;
   background-color: #F5F5F5;
@@ -132,13 +112,11 @@ header svg:hover {
   padding: 5px 10px;
   text-transform: capitalize;
 }
-
 .draggable-task-container .task-details .task-title {
   font-size: 16px;
   line-height: 1;
   margin-bottom: 2px;
 }
-
 .draggable-task-container .task-details .task-description {
   font-size: 12px;
   line-height: 1;
@@ -147,7 +125,5 @@ header svg:hover {
 .hide {
   display: none;
 }
-
-
 
 /*# sourceMappingURL=calendar.css.map */

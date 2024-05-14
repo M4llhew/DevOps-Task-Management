@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Upcoming{% endblock %}
+{% block styles %}
+    <link href="{% static 'tasks/css/upcoming.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div class="upcoming">
+        <p class="header-text">Upcoming</p>
+        <div class="date-section">
+            <div class="month-controls">
+                <p class="current-date"> {{ "current-date" }}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+
+            </div>
+            <div class="date-controls">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-chevron-left">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <p class="selected-date">{{ "today" }}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </div>
+        </div>
+        <div class="current-weeks-dates">
+            <p>sun 1st</p>
+            <p>mon 2st</p>
+            <p>tue 3st</p>
+            <p>wed 4st</p>
+            <p>thu 5st</p>
+            <p>fri 6st</p>
+            <p>sat 7st</p>
+
+        </div>
+    </div>
+
+
+{#    TODO AN IF STATEMENT IF THERE ARE OVERDUES   #}
+{% endblock %}

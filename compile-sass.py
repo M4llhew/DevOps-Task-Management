@@ -6,4 +6,5 @@ if __name__ == "__main__":
                "users/static/users/sass:users/static/users/css",
                "static/sass/:static/mysite/css/"
                ]
-    subprocess.run(command, shell=True)
+    print(command)
+    subprocess.run(command, check=True)

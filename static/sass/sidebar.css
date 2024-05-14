@@ -5,44 +5,35 @@
   display: flex;
   flex-direction: row;
 }
-
 .sidebar-container svg {
   transition: stroke-width 0.2s ease;
   stroke-width: 0.125rem;
 }
-
 .sidebar-container p {
   transition: font-weight 0.2s ease;
 }
-
 .sidebar-container form {
   width: 100%;
 }
-
 .sidebar-container .hide {
   display: none;
 }
-
 .sidebar-container .collapsed-size {
   min-width: 5.125rem;
 }
-
 .sidebar-container .bottom {
   margin-top: auto;
 }
-
 .sidebar-container ul {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-
 .sidebar-container .header-logo {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
 }
-
 .sidebar-container .navigation-link {
   display: flex;
   flex-direction: row;
@@ -52,7 +43,6 @@
   align-items: center;
   min-height: 2.3rem;
 }
-
 .sidebar-container .navigation-link svg {
   margin-right: 0.5rem;
   width: 1rem;
@@ -61,7 +51,6 @@
   margin-left: 0.25rem;
   padding-bottom: 0.15rem;
 }
-
 .sidebar-container .new-task-button {
   display: flex;
   flex-direction: row;
@@ -79,32 +68,25 @@
   margin-bottom: 0.5rem;
   min-height: 2rem;
 }
-
 .sidebar-container .new-task-button:hover {
   cursor: pointer;
 }
-
 .sidebar-container .new-task-button:hover p {
   font-weight: 550;
 }
-
 .sidebar-container .new-task-button:hover svg {
   stroke-width: 0.1875rem;
 }
-
 .sidebar-container .new-task-button svg {
   width: 1rem;
   margin-right: 0.5rem;
 }
-
 .sidebar-container .new-task-button p {
   text-transform: capitalize;
 }
-
 .sidebar-container .new-task-button p {
   margin-right: 1rem;
 }
-
 .sidebar-container .logout-button {
   display: flex;
   flex-direction: row;
@@ -120,32 +102,25 @@
   background-color: #EFEFEF;
   color: #000000;
 }
-
 .sidebar-container .logout-button:hover {
   cursor: pointer;
 }
-
 .sidebar-container .logout-button:hover p {
   font-weight: 550;
 }
-
 .sidebar-container .logout-button:hover svg {
   stroke-width: 0.1875rem;
 }
-
 .sidebar-container .logout-button svg {
   width: 1rem;
   margin-right: 0.5rem;
 }
-
 .sidebar-container .logout-button p {
   text-transform: capitalize;
 }
-
 .sidebar-container .logout-button p {
   margin-right: 0.5rem;
 }
-
 .sidebar-container .header-container {
   display: flex;
   flex-direction: row;
@@ -157,13 +132,11 @@
   color: #000000;
   min-height: 3rem;
 }
-
 .sidebar-container .header-container .company-name {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 550;
 }
-
 .sidebar-container .header-container .feather-x {
   margin-left: auto;
   stroke-width: 0.1875rem;
@@ -171,29 +144,24 @@
   height: 100%;
   color: #363636;
 }
-
 .sidebar-container .header-container .feather-x:hover {
   cursor: pointer;
   stroke-width: 0.25rem;
   color: #000000;
 }
-
 .sidebar-container .header-container .user-name {
   color: #000000;
 }
-
 .sidebar-container .header-container .user-name:hover {
   font-weight: 600;
   cursor: pointer;
 }
-
 .sidebar-container .header-text {
   color: #6C7B91;
   font-size: 1rem;
   font-weight: 550;
   margin-bottom: 0.5rem;
 }
-
 .sidebar-container .menu {
   display: flex;
   flex-direction: column;
@@ -204,20 +172,16 @@
   border-bottom: 0.1875rem solid #E1E5E8;
   margin-bottom: 1rem;
 }
-
 .sidebar-container .menu .navigation-link:last-child {
   margin-top: auto;
 }
-
 .sidebar-container .menu .navigation-link:hover {
   cursor: pointer;
   font-weight: 600;
 }
-
 .sidebar-container .menu .navigation-link:hover svg {
   stroke-width: 0.1875rem;
 }
-
 .sidebar-container .menu .selected {
   display: flex;
   flex-direction: row;
@@ -225,7 +189,6 @@
   border-radius: 0.5rem;
   background-color: #EFEFEF;
 }
-
 .sidebar-container .profile {
   height: fit-content;
   display: flex;
@@ -234,7 +197,6 @@
   justify-content: center;
   margin-top: auto;
 }
-
 .sidebar-container .profile img {
   background-color: blue;
   width: 2rem;
@@ -242,14 +204,12 @@
   border-radius: 0.75rem;
   margin-right: 0.5rem;
 }
-
 .sidebar-container .profile .profile-content {
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
   align-items: center;
 }
-
 .sidebar-container .profile .profile-text {
   display: flex;
   flex-direction: column;
@@ -258,13 +218,11 @@
   line-height: 1;
   height: 100%;
 }
-
 .sidebar-container .profile .profile-name {
   color: #000000;
   text-transform: capitalize;
   margin-bottom: 0.25rem;
 }
-
 .sidebar-container .profile .profile-email {
   color: #5B5B5B;
   text-transform: lowercase;
@@ -279,7 +237,6 @@
   background: #FFFFFF;
   min-width: 15rem;
 }
-
 .sidebar-expanded .sidebar-closed-button {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -298,46 +255,36 @@
   text-transform: capitalize;
   min-width: 5.125rem;
 }
-
 .sidebar-collapsed .header-container {
   justify-content: center;
 }
-
 .sidebar-collapsed .header-container svg:hover {
   stroke-width: 0.1875rem;
   cursor: pointer;
 }
-
 .sidebar-collapsed .new-task-button {
   padding: inherit 0.5rem;
 }
-
 .sidebar-collapsed .new-task-button p {
   margin-right: 0;
 }
-
 .sidebar-collapsed svg {
   margin-left: 0;
   margin-right: 0;
 }
-
 .sidebar-collapsed .navigation-link {
   justify-content: center;
 }
-
 .sidebar-collapsed .logout-button {
   justift-content: center;
 }
-
 .sidebar-collapsed .profile-image {
   margin-right: 0;
 }
-
 .sidebar-collapsed .profile-content {
   justify-content: center;
   width: 100%;
 }
-
 .sidebar-collapsed p {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -347,7 +294,6 @@
   white-space: nowrap;
   width: 1px;
 }
-
 .sidebar-collapsed .header-logo {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -357,7 +303,6 @@
   white-space: nowrap;
   width: 1px;
 }
-
 .sidebar-collapsed .sidebar-opened-button {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -367,11 +312,9 @@
   white-space: nowrap;
   width: 1px;
 }
-
 .sidebar-collapsed .tooltip {
   position: relative; /* Make the parent element of the tooltip relative */
 }
-
 .sidebar-collapsed .tooltip:hover::before {
   content: attr(data-tooltip);
   text-transform: capitalize;
@@ -387,11 +330,9 @@
   font-weight: 400;
   left: calc(100% + 0.25rem); /* Move the tooltip to the right of the SVG */
 }
-
 .sidebar-collapsed .tooltip-inverted {
   position: relative;
 }
-
 .sidebar-collapsed .tooltip-inverted:hover::before {
   content: attr(data-tooltip);
   text-transform: capitalize;
@@ -408,7 +349,5 @@
   left: calc(100% + 0.25rem);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 /*# sourceMappingURL=sidebar.css.map */

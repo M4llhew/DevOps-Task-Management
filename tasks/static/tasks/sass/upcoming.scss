@@ -1,0 +1,53 @@
+@use '../../../../static/sass/constants';
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: constants.$background-color;
+}
+
+.upcoming {
+
+  width: fit-content;
+
+  svg {
+    stroke-width: 0.125rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .header-text {
+    font-size: 1rem;
+  }
+
+  .date-section {
+    @include constants.inline-row;
+    text-transform: capitalize;
+  }
+
+  .month-controls {
+    @include constants.inline-row;
+    background-color: #EFEFEF;
+  }
+
+  .date-controls {
+    @include constants.inline-row;
+    background-color: #EFEFEF;
+    margin-left: auto;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .current-weeks-dates {
+    @include constants.inline-row;
+    border-bottom: 0.1875rem solid constants.$border-color;;
+
+    p {
+      padding: 0 1rem;
+      text-transform: capitalize;
+    }
+  }
+}

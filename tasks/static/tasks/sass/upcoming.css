@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.upcoming {
+  width: fit-content;
+}
+.upcoming svg {
+  stroke-width: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.upcoming .header-text {
+  font-size: 1rem;
+}
+.upcoming .date-section {
+  display: flex;
+  flex-direction: row;
+  text-transform: capitalize;
+}
+.upcoming .month-controls {
+  display: flex;
+  flex-direction: row;
+  background-color: #EFEFEF;
+}
+.upcoming .date-controls {
+  display: flex;
+  flex-direction: row;
+  background-color: #EFEFEF;
+  margin-left: auto;
+}
+.upcoming .date-controls p {
+  font-size: 1rem;
+}
+.upcoming .current-weeks-dates {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.1875rem solid #E1E5E8;
+}
+.upcoming .current-weeks-dates p {
+  padding: 0 1rem;
+  text-transform: capitalize;
+}
+
+/*# sourceMappingURL=upcoming.css.map */

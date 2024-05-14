@@ -32,211 +32,212 @@
     }
 }
 
-svg {
-    transition: stroke-width 0.2s ease;
-    stroke-width: 0.125rem;
-}
 
-p {
-    transition: font-weight 0.2s ease;
-}
-
-form {
-    width: 100%;
-}
-
-.hide {
-    display: none;
-}
-
-.collapsed-size {
-    min-width: 5.125rem;
-}
-
-.bottom {
-    margin-top: auto;
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.header-logo {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.5rem;
-}
-
-.navigation-link {
-    @include constants.inline-row;
-    color: constants.$tertiary-color;
-    margin-bottom: 0.3rem;
-    padding: 0.4rem 0.5rem;
-    align-items: center;
-    min-height: 2.3rem;;
-
-    svg {
-        margin-right: 0.5rem;
-        width: 1rem;
-        height: 100%;
-        stroke-width: 0.125rem;
-        margin-left: 0.25rem;
-        padding-bottom: 0.15rem;
-    }
-}
-
-.new-task-button {
-    @include button-styles;
-    @include constants.inline-row;
-    background-color: #2C353F;
-    color: constants.$background-color;
-    margin-bottom: 0.5rem;
-    min-height: 2rem;
-
-    p {
-        margin-right: 1rem;
-    }
-}
-
-.logout-button {
-    @include button-styles;
-    @include constants.inline-row;
-    background-color: #EFEFEF;
-    color: constants.$primary-color;
-
-    p {
-        margin-right: 0.5rem;
-    }
-}
-
-.header-container {
-    @include constants.inline-row;
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    height: fit-content;
-    color: constants.$primary-color;
-    min-height: 3rem;
-
-    .company-name {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        font-weight: 550;
-    }
-
-    .feather-x {
-        margin-left: auto;
-        stroke-width: 0.1875rem;
-        width: 1rem;
-        height: 100%;
-        color: constants.$secondary-color;
-    }
-
-    .feather-x:hover {
-        cursor: pointer;
-        stroke-width: 0.25rem;
-        color: constants.$primary-color;
-    }
-
-    .user-name {
-        color: constants.$primary-color;
-    }
-
-    .user-name:hover {
-        font-weight: 600;
-        cursor: pointer;
-    }
-}
-
-.header-text {
-    color: #6C7B91;
-    font-size: 1rem;
-    font-weight: 550;
-    margin-bottom: 0.5rem;
-}
-
-.menu {
-    @include constants.inline-column;
-    font-size: 1rem;
-    text-transform: capitalize;
-    flex-grow: 1;
-    width: 100%;
-    border-bottom: 0.1875rem solid constants.$border-color;
-    margin-bottom: 1rem;
-
-    .navigation-link:last-child {
-        margin-top: auto;
-    }
-
-    .navigation-link:hover {
-        cursor: pointer;
-        font-weight: 600;
-
-        svg {
-            stroke-width: 0.1875rem;
-        }
-    }
-
-    .selected {
-        @include constants.inline-row;
-        color: constants.$primary-color;
-        border-radius: 0.5rem;
-        background-color: #EFEFEF;
-    }
-}
-
-.profile {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: auto;
-
-    img {
-        background-color: blue;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 0.75rem;
-        margin-right: 0.5rem;
-    }
-
-    .profile-content {
-        @include constants.inline-row;
-        margin-bottom: 1rem;
-        align-items: center;
-    }
-
-    .profile-text {
-        @include constants.inline-column;
-        justify-content: center;
-        font-size: 0.8rem;
-        line-height: 1;
-        height: 100%;
-    }
-
-    .profile-name {
-        color: constants.$primary-color;
-        text-transform: capitalize;
-        margin-bottom: 0.25rem;
-    }
-
-    .profile-email {
-        color: constants.$tertiary-color;
-        text-transform: lowercase;
-    }
-}
 
 .sidebar-container {
     position: relative;
     transition: min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-    min-height: 100vh;
     display: flex;
     flex-direction: row;
+
+    svg {
+        transition: stroke-width 0.2s ease;
+        stroke-width: 0.125rem;
+    }
+
+    p {
+        transition: font-weight 0.2s ease;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .collapsed-size {
+        min-width: 5.125rem;
+    }
+
+    .bottom {
+        margin-top: auto;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .header-logo {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .navigation-link {
+        @include constants.inline-row;
+        color: constants.$tertiary-color;
+        margin-bottom: 0.3rem;
+        padding: 0.4rem 0.5rem;
+        align-items: center;
+        min-height: 2.3rem;;
+
+        svg {
+            margin-right: 0.5rem;
+            width: 1rem;
+            height: 100%;
+            stroke-width: 0.125rem;
+            margin-left: 0.25rem;
+            padding-bottom: 0.15rem;
+        }
+    }
+
+    .new-task-button {
+        @include button-styles;
+        @include constants.inline-row;
+        background-color: #2C353F;
+        color: constants.$background-color;
+        margin-bottom: 0.5rem;
+        min-height: 2rem;
+
+        p {
+            margin-right: 1rem;
+        }
+    }
+
+    .logout-button {
+        @include button-styles;
+        @include constants.inline-row;
+        background-color: #EFEFEF;
+        color: constants.$primary-color;
+
+        p {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .header-container {
+        @include constants.inline-row;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        height: fit-content;
+        color: constants.$primary-color;
+        min-height: 3rem;
+
+        .company-name {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 550;
+        }
+
+        .feather-x {
+            margin-left: auto;
+            stroke-width: 0.1875rem;
+            width: 1rem;
+            height: 100%;
+            color: constants.$secondary-color;
+        }
+
+        .feather-x:hover {
+            cursor: pointer;
+            stroke-width: 0.25rem;
+            color: constants.$primary-color;
+        }
+
+        .user-name {
+            color: constants.$primary-color;
+        }
+
+        .user-name:hover {
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    .header-text {
+        color: #6C7B91;
+        font-size: 1rem;
+        font-weight: 550;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu {
+        @include constants.inline-column;
+        font-size: 1rem;
+        text-transform: capitalize;
+        flex-grow: 1;
+        width: 100%;
+        border-bottom: 0.1875rem solid constants.$border-color;
+        margin-bottom: 1rem;
+
+        .navigation-link:last-child {
+            margin-top: auto;
+        }
+
+        .navigation-link:hover {
+            cursor: pointer;
+            font-weight: 600;
+
+            svg {
+                stroke-width: 0.1875rem;
+            }
+        }
+
+        .selected {
+            @include constants.inline-row;
+            color: constants.$primary-color;
+            border-radius: 0.5rem;
+            background-color: #EFEFEF;
+        }
+    }
+
+    .profile {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: auto;
+
+        img {
+            background-color: blue;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.75rem;
+            margin-right: 0.5rem;
+        }
+
+        .profile-content {
+            @include constants.inline-row;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .profile-text {
+            @include constants.inline-column;
+            justify-content: center;
+            font-size: 0.8rem;
+            line-height: 1;
+            height: 100%;
+        }
+
+        .profile-name {
+            color: constants.$primary-color;
+            text-transform: capitalize;
+            margin-bottom: 0.25rem;
+        }
+
+        .profile-email {
+            color: constants.$tertiary-color;
+            text-transform: lowercase;
+        }
+    }
 }
 
 
@@ -245,7 +246,6 @@ ul {
     width: 100%;
     text-transform: capitalize;
     padding: 1rem;
-    min-height: 100%;
     background: constants.$background-color;
     min-width: 15rem;
 

@@ -63,3 +63,7 @@ class CalendarView(SidebarView):
             'sunday',
         ]
         return context
+
+class UpcomingView(SidebarView):
+    template_name = 'tasks/upcoming.html'
+
