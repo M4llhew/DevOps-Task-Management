@@ -6,53 +6,118 @@ main {
 }
 
 .upcoming {
+  padding: 1.5rem 1rem 1rem 1rem;
   width: fit-content;
 }
-
 .upcoming svg {
   stroke-width: 0.125rem;
   width: 1.5rem;
   height: 1.5rem;
 }
-
 .upcoming .header-text {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 550;
+  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
 }
-
 .upcoming .date-section {
   display: flex;
   flex-direction: row;
   text-transform: capitalize;
+  padding-bottom: 1rem;
 }
-
 .upcoming .month-controls {
   display: flex;
   flex-direction: row;
-  background-color: #EFEFEF;
+  padding: 0 0.25rem 0 0.5rem;
 }
-
+.upcoming .month-controls:hover {
+  cursor: pointer;
+  color: #000000;
+  background-color: #EFEFEF;
+  border-radius: 0.5rem;
+}
 .upcoming .date-controls {
   display: flex;
   flex-direction: row;
-  background-color: #EFEFEF;
   margin-left: auto;
+  border: 0.1rem solid #E1E5E8;
+  border-radius: 0.5rem;
+  color: #5B5B5B;
 }
-
-.upcoming .date-controls p {
+.upcoming .date-controls .selected-date {
   font-size: 1rem;
+  padding: 0 0.4rem;
+  display: inline-block;
+  text-align: center;
 }
-
+.upcoming .date-controls .feather-chevron-left:hover {
+  cursor: pointer;
+  color: #000000;
+  background-color: #EFEFEF;
+  background-color: #EFEFEF;
+}
+.upcoming .date-controls .chevron-left-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.upcoming .date-controls .chevron-left-container::after {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 0.1rem;
+  background-color: #E1E5E8;
+  right: 0;
+}
+.upcoming .date-controls .chevron-right-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.upcoming .date-controls .chevron-right-container::after {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 0.1rem;
+  background-color: #E1E5E8;
+  left: 0;
+}
+.upcoming .date-controls .feather-chevron-right:hover {
+  cursor: pointer;
+  color: #000000;
+  background-color: #EFEFEF;
+  background-color: #EFEFEF;
+}
+.upcoming .date-controls .selected-date:hover {
+  cursor: pointer;
+  color: #000000;
+  background-color: #EFEFEF;
+  background-color: #EFEFEF;
+}
 .upcoming .current-weeks-dates {
   display: flex;
   flex-direction: row;
   border-bottom: 0.1875rem solid #E1E5E8;
+  padding-bottom: 0.25rem;
 }
-
 .upcoming .current-weeks-dates p {
-  padding: 0 1rem;
+  margin: 0 0.5rem;
+  padding: 0 1.5rem;
   text-transform: capitalize;
+  color: #5B5B5B;
 }
-
-
+.upcoming .current-weeks-dates p:hover {
+  cursor: pointer;
+  color: #000000;
+  background-color: #EFEFEF;
+  border-radius: 0.5rem;
+}
+.upcoming .current-weeks-dates .selected {
+  border: 0.25rem;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  background-color: #2C353F;
+}
 
 /*# sourceMappingURL=upcoming.css.map */

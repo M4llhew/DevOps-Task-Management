@@ -42,6 +42,12 @@ $border-color: #E1E5E8;
   flex-direction: column;
 }
 
+@mixin hovered {
+  cursor: pointer;
+  color: $primary-color;
+  background-color: #EFEFEF;
+}
+
 // @mixin colourful {
 //     linear-gradient(to right, #4C64CA, #5F39BC);
 //     color: #EAEAEA;

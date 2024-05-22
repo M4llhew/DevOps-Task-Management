@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render, HttpResponse
 from django.views.generic import TemplateView
 from tasks.models import Task
@@ -64,6 +66,18 @@ class CalendarView(SidebarView):
         ]
         return context
 
+
 class UpcomingView(SidebarView):
     template_name = 'tasks/upcoming.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(UpcomingView, self).get_context_data(*args, **kwargs)
+        current_date = datetime.datetime.now()
+        start_date = current_date - datetime.timedelta(days=current_date.weekday())
+        list_of_dates = [start_date.strftime('%m/%d/%Y')]
+        for i in range (6):
+            list_of_dates.append((start_date + datetime.timedelta(days=i + 1)).strftime('%m/%d/%Y'))
+
+        print(list_of_dates, "DATES LIST")
+        return context
 

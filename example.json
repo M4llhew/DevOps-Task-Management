@@ -1,0 +1,24 @@
+[
+  {
+    "day": "Monday",
+    "tasks": [
+      {
+        "name": "Do X"
+      },
+      {
+        "name": "Do y"
+      }
+    ]
+  },
+  {
+    "day": "Tuesday",
+    "tasks": [
+      {
+        "name": "Do Z"
+      },
+      {
+        "name": "Do A"
+      }
+    ]
+  }
+]

@@ -15,20 +15,24 @@
                      class="feather feather-chevron-down">
                     <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
-
             </div>
             <div class="date-controls">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                <div class="chevron-left-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-chevron-left">
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
+                </div>
+
                 <p class="selected-date">{{ "today" }}</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                <div class="chevron-right-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                      class="feather feather-chevron-right">
                     <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
+                </div>
             </div>
         </div>
         <div class="current-weeks-dates">
@@ -38,8 +42,10 @@
             <p>wed 4st</p>
             <p>thu 5st</p>
             <p>fri 6st</p>
-            <p>sat 7st</p>
-
+            <p class="selected">sat 7st</p>
+        </div>
+        <div class="tasks">
+            
         </div>
     </div>
 

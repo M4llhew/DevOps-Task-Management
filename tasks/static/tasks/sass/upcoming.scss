@@ -8,7 +8,7 @@ main {
 }
 
 .upcoming {
-
+  padding: 1.5rem 1rem 1rem 1rem;
   width: fit-content;
 
   svg {
@@ -18,36 +18,124 @@ main {
   }
 
   .header-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: 550;
+    padding-bottom: 0.75rem;
+    padding-left: 0.5rem;
   }
 
   .date-section {
     @include constants.inline-row;
     text-transform: capitalize;
+    padding-bottom: 1rem;
   }
 
   .month-controls {
     @include constants.inline-row;
-    background-color: #EFEFEF;
+    padding: 0 0.25rem 0 0.5rem;
+
+    //&:hover {
+    //  @include constants.hovered;
+    //}
+  }
+
+  .month-controls:hover {
+    @include constants.hovered;
+    border-radius: 0.5rem;
   }
 
   .date-controls {
     @include constants.inline-row;
-    background-color: #EFEFEF;
+    //background-color: #EFEFEF;
     margin-left: auto;
+    border: 0.1rem solid constants.$border-color;
+    border-radius: 0.5rem;
+    color: constants.$tertiary-color;
 
-    p {
+    .selected-date {
       font-size: 1rem;
+      padding: 0 0.4rem;
+      display: inline-block;
+      text-align: center;
+      //min-width: 4rem;
+    }
+
+    .feather-chevron-left:hover {
+      @include constants.hovered;
+      background-color: #EFEFEF;
+    }
+
+    .chevron-left-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+
+        height: 60%;
+        width: 0.1rem;
+        background-color: constants.$border-color;
+        right: 0;
+      }
+    }
+
+    .chevron-right-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+
+        height: 60%;
+        width: 0.1rem;
+        background-color: constants.$border-color;
+        left: 0;
+      }
+    }
+
+    .feather-chevron-right:hover {
+      @include constants.hovered;
+      background-color: #EFEFEF;
+    }
+
+    .selected-date:hover {
+      @include constants.hovered;
+      background-color: #EFEFEF;
     }
   }
 
+
+
+
+
+
+
   .current-weeks-dates {
     @include constants.inline-row;
-    border-bottom: 0.1875rem solid constants.$border-color;;
+    border-bottom: 0.1875rem solid constants.$border-color;
+    padding-bottom: 0.25rem;
 
     p {
-      padding: 0 1rem;
+      margin: 0 0.5rem;
+      padding: 0 1.5rem;
       text-transform: capitalize;
+      color: constants.$tertiary-color;
+
+      &:hover {
+        @include constants.hovered;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .selected {
+      border: 0.25rem;
+      border-radius: 0.5rem;
+      color: constants.$background-color;
+      background-color: #2C353F;
     }
   }
 }
